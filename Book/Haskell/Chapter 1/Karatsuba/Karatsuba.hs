@@ -38,6 +38,6 @@ karatsuba x y =
                   -- Recursively compute partial products
                   ac = go a c nOver2
                   bd = go b d nOver2
-                  pq = karatsuba p q -- We don't know the number of digits
+                  pq = go p q nOver2
 
                   adbc = pq - ac - bd 
