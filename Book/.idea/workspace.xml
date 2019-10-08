@@ -15,11 +15,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="BasicMatrixMult.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="BasicMatrixMult.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Java/src/BasicMatrixMult.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="440">
-              <caret line="20" column="22" selection-start-line="20" selection-start-column="22" selection-end-line="20" selection-end-column="22" />
+            <state relative-caret-position="242">
+              <caret line="39" column="5" selection-start-line="39" selection-start-column="5" selection-end-line="39" selection-end-column="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RecMatMult.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Java/src/RecMatMult.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="154">
+              <caret line="107" column="42" selection-start-line="107" selection-start-column="42" selection-end-line="107" selection-end-column="42" />
             </state>
           </provider>
         </entry>
@@ -48,6 +57,7 @@
         <option value="$PROJECT_DIR$/Java/src/SortAndCountInvList.java" />
         <option value="$PROJECT_DIR$/Java/src/SortAndCountInv.java" />
         <option value="$PROJECT_DIR$/Java/src/BasicMatrixMult.java" />
+        <option value="$PROJECT_DIR$/Java/src/RecMatMult.java" />
       </list>
     </option>
   </component>
@@ -134,7 +144,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.BasicMatrixMult">
+  <component name="RunManager" selected="Application.RecMatMult">
     <configuration name="BasicMatrixMult" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="BasicMatrixMult" />
       <module name="Algorithms Book" />
@@ -150,8 +160,8 @@
       <module name="Algorithms Book" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
     </configuration>
-    <configuration name="RecIntMult" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="RecIntMult" />
+    <configuration name="RecMatMult" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="RecMatMult" />
       <module name="Algorithms Book" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
     </configuration>
@@ -184,19 +194,19 @@
       <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
     </configuration>
     <list>
-      <item itemvalue="Application.RecIntMult" />
       <item itemvalue="Application.MergeSort" />
       <item itemvalue="Application.BruteForceSearch" />
       <item itemvalue="Application.SortAndCountInv" />
       <item itemvalue="Application.BasicMatrixMult" />
+      <item itemvalue="Application.RecMatMult" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.RecMatMult" />
         <item itemvalue="Application.BasicMatrixMult" />
         <item itemvalue="Application.SortAndCountInv" />
         <item itemvalue="Application.BruteForceSearch" />
         <item itemvalue="Application.MergeSort" />
-        <item itemvalue="Application.RecIntMult" />
       </list>
     </recent_temporary>
   </component>
@@ -318,8 +328,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Java/src/BasicMatrixMult.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="440">
-          <caret line="20" column="22" selection-start-line="20" selection-start-column="22" selection-end-line="20" selection-end-column="22" />
+        <state relative-caret-position="242">
+          <caret line="39" column="5" selection-start-line="39" selection-start-column="5" selection-end-line="39" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-10.0.1/lib/src.zip!/java.base/java/util/Arrays.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="542">
+          <caret line="3947" column="26" selection-start-line="3947" selection-start-column="26" selection-end-line="3947" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Java/src/RecMatMult.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="107" column="42" selection-start-line="107" selection-start-column="42" selection-end-line="107" selection-end-column="42" />
         </state>
       </provider>
     </entry>
