@@ -24,11 +24,24 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BruteForceSearch.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="BruteForceSearch.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Java/src/BruteForceSearch.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="396">
-              <caret line="18" column="8" selection-start-line="18" selection-start-column="8" selection-end-line="18" selection-end-column="8" />
+              <caret line="18" selection-start-line="18" selection-end-line="18" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SortAndCountInv.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Java/src/SortAndCountInv.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="66">
+              <caret line="131" lean-forward="true" selection-start-line="131" selection-end-line="131" />
+              <folding>
+                <element signature="e#2534#2535#0" expanded="true" />
+                <element signature="e#2625#2626#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -54,6 +67,8 @@
         <option value="$PROJECT_DIR$/src/RecIntMult.java" />
         <option value="$PROJECT_DIR$/Java/src/MergeSort.java" />
         <option value="$PROJECT_DIR$/Java/src/BruteForceSearch.java" />
+        <option value="$PROJECT_DIR$/Java/src/SortAndCountInvList.java" />
+        <option value="$PROJECT_DIR$/Java/src/SortAndCountInv.java" />
       </list>
     </option>
   </component>
@@ -140,7 +155,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.BruteForceSearch">
+  <component name="RunManager" selected="Application.SortAndCountInv">
     <configuration name="BruteForceSearch" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="BruteForceSearch" />
       <module name="Algorithms Book" />
@@ -153,6 +168,11 @@
     </configuration>
     <configuration name="RecIntMult" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="RecIntMult" />
+      <module name="Algorithms Book" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+    </configuration>
+    <configuration name="SortAndCountInv" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="SortAndCountInv" />
       <module name="Algorithms Book" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
     </configuration>
@@ -183,9 +203,11 @@
       <item itemvalue="Application.RecIntMult" />
       <item itemvalue="Application.MergeSort" />
       <item itemvalue="Application.BruteForceSearch" />
+      <item itemvalue="Application.SortAndCountInv" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.SortAndCountInv" />
         <item itemvalue="Application.BruteForceSearch" />
         <item itemvalue="Application.MergeSort" />
         <item itemvalue="Application.RecIntMult" />
@@ -246,7 +268,7 @@
           <properties />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="1" />
+      <option name="time" value="3" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="Application">
@@ -280,6 +302,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Java/src/SortAndCountInvList.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Java/src/BruteForceSearch.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="18" selection-start-line="18" selection-end-line="18" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Java/src/MergeSort.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="462">
@@ -287,10 +319,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Java/src/BruteForceSearch.java">
+    <entry file="file://$PROJECT_DIR$/Java/src/SortAndCountInv.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="18" column="8" selection-start-line="18" selection-start-column="8" selection-end-line="18" selection-end-column="8" />
+        <state relative-caret-position="66">
+          <caret line="131" lean-forward="true" selection-start-line="131" selection-end-line="131" />
+          <folding>
+            <element signature="e#2534#2535#0" expanded="true" />
+            <element signature="e#2625#2626#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

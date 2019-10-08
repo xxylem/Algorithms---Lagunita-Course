@@ -16,7 +16,7 @@ public class BruteForceSearch {
         System.out.println(ysNInvs);
         System.out.println("Zs: ");
         System.out.println(zsNInvs);
-        
+
     }
 
     /**
