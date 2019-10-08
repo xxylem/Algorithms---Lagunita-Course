@@ -15,47 +15,14 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="BasicMatrixMult.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Java/src/BasicMatrixMult.java">
+      <file leaf-file-name="ClosestPair.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Java/src/Chapter3/ClosestPair.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="242">
-              <caret line="39" column="5" selection-start-line="39" selection-start-column="5" selection-end-line="39" selection-end-column="5" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RecMatMult.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Java/src/RecMatMult.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2288">
-              <caret line="107" column="42" selection-start-line="107" selection-start-column="42" selection-end-line="107" selection-end-column="42" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MergeSort.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Java/src/Chapter1/MergeSort.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="220">
-              <caret line="19" column="5" lean-forward="true" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="5" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RecIntMult.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Java/src/Chapter1/RecIntMult.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="264">
-              <caret line="18" column="19" selection-start-line="18" selection-start-column="19" selection-end-line="18" selection-end-column="19" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RecIntMultVal.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Java/src/Chapter1/RecIntMultVal.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="44">
-              <caret line="2" selection-start-line="2" selection-end-line="2" />
+            <state relative-caret-position="198">
+              <caret line="271" column="5" selection-start-line="271" selection-start-column="5" selection-end-line="271" selection-end-column="5" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -72,6 +39,7 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>^</find>
+      <find>copyOf</find>
     </findStrings>
   </component>
   <component name="IdeDocumentHistory">
@@ -87,6 +55,7 @@
         <option value="$PROJECT_DIR$/Java/src/RecMatMult.java" />
         <option value="$PROJECT_DIR$/Java/src/Chapter1/RecIntMultVal.java" />
         <option value="$PROJECT_DIR$/Java/src/Chapter1/RecIntMult.java" />
+        <option value="$PROJECT_DIR$/Java/src/Chapter3/ClosestPair.java" />
       </list>
     </option>
   </component>
@@ -123,6 +92,12 @@
             <path>
               <item name="Algorithms Book" type="b2602c69:ProjectViewProjectNode" />
               <item name="Book" type="462c0819:PsiDirectoryNode" />
+              <item name="Haskell" type="462c0819:PsiDirectoryNode" />
+              <item name="Chapter 3" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Algorithms Book" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Book" type="462c0819:PsiDirectoryNode" />
               <item name="Java" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -137,6 +112,13 @@
               <item name="Java" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="Chapter1" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Algorithms Book" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Book" type="462c0819:PsiDirectoryNode" />
+              <item name="Java" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Chapter3" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -154,6 +136,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Computer Science and Maths\Computer Science\Algorithms (Stanford)\git\Algorithms---Lagunita-Course\Book\Octave-Matlab\Chapter 3" />
       <recent name="C:\Computer Science and Maths\Computer Science\Algorithms (Stanford)\git\Algorithms---Lagunita-Course\Book\Java" />
       <recent name="C:\Computer Science and Maths\Computer Science\Algorithms (Stanford)\git\Algorithms---Lagunita-Course\Book\N" />
     </key>
@@ -170,7 +153,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.SortAndCountInv">
+  <component name="RunManager" selected="Application.ClosestPair">
     <configuration name="BasicMatrixMult" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Chapter3.BasicMatrixMult" />
       <module name="Algorithms Book" />
@@ -187,13 +170,13 @@
         </pattern>
       </extension>
     </configuration>
-    <configuration name="RecIntMult" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Chapter1.RecIntMult" />
+    <configuration name="ClosestPair" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Chapter3.ClosestPair" />
       <module name="Algorithms Book" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Chapter1.*" />
+          <option name="PATTERN" value="Chapter3.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -240,17 +223,17 @@
     <list>
       <item itemvalue="Application.BasicMatrixMult" />
       <item itemvalue="Application.RecMatMult" />
-      <item itemvalue="Application.RecIntMult" />
       <item itemvalue="Application.BruteForceSearch" />
       <item itemvalue="Application.SortAndCountInv" />
+      <item itemvalue="Application.ClosestPair" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.ClosestPair" />
         <item itemvalue="Application.SortAndCountInv" />
         <item itemvalue="Application.RecMatMult" />
         <item itemvalue="Application.BruteForceSearch" />
         <item itemvalue="Application.BasicMatrixMult" />
-        <item itemvalue="Application.RecIntMult" />
       </list>
     </recent_temporary>
   </component>
@@ -278,11 +261,11 @@
       <window_info anchor="right" id="Capture Analysis" />
       <window_info anchor="bottom" id="Event Log" side_tool="true" weight="0.3290938" />
       <window_info anchor="bottom" id="Version Control" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.3290938" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3290938" />
       <window_info anchor="bottom" id="Terminal" />
       <window_info id="Capture Tool" />
       <window_info id="Designer" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24963397" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24963397" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3290938" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Theme Preview" />
@@ -301,7 +284,15 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="3" />
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/Java/src/Chapter3/ClosestPair.java</url>
+          <line>160</line>
+          <properties />
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="5" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="Application">
@@ -324,42 +315,17 @@
     <entry file="file://$PROJECT_DIR$/Java/src/SortAndCountInvList.java">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/Java/src/SortAndCountInv.java">
+    <entry file="file://$PROJECT_DIR$/Java/src/Chapter1/RecIntMultVal.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="440">
-          <caret line="20" column="8" selection-start-line="20" selection-start-column="8" selection-end-line="20" selection-end-column="8" />
-          <folding>
-            <element signature="e#2534#2535#0" expanded="true" />
-            <element signature="e#2625#2626#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="44">
+          <caret line="2" selection-start-line="2" selection-end-line="2" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Java/src/BruteForceSearch.java">
+    <entry file="file://$PROJECT_DIR$/Java/src/Chapter1/RecIntMult.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="18" selection-start-line="18" selection-end-line="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Java/src/BasicMatrixMult.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="39" column="5" selection-start-line="39" selection-start-column="5" selection-end-line="39" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk-10.0.1/lib/src.zip!/java.base/java/util/Arrays.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="542">
-          <caret line="3947" column="26" selection-start-line="3947" selection-start-column="26" selection-end-line="3947" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Java/src/RecMatMult.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2288">
-          <caret line="107" column="42" selection-start-line="107" selection-start-column="42" selection-end-line="107" selection-end-column="42" />
+        <state relative-caret-position="126">
+          <caret line="46" column="29" lean-forward="true" selection-start-line="46" selection-start-column="29" selection-end-line="46" selection-end-column="29" />
         </state>
       </provider>
     </entry>
@@ -370,17 +336,48 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Java/src/Chapter1/RecIntMultVal.java">
+    <entry file="file://$PROJECT_DIR$/Java/src/Chapter3/SortAndCountInv.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="44">
-          <caret line="2" selection-start-line="2" selection-end-line="2" />
+        <state relative-caret-position="88">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Java/src/Chapter1/RecIntMult.java">
+    <entry file="file://$PROJECT_DIR$/Java/src/Chapter3/RecMatMult.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="18" column="19" selection-start-line="18" selection-start-column="19" selection-end-line="18" selection-end-column="19" />
+        <state relative-caret-position="88">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Java/src/Chapter3/BruteForceSearch.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="44">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Java/src/Chapter3/BasicMatrixMult.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-10.0.1/lib/src.zip!/java.base/java/util/Arrays.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="1411" column="22" selection-start-line="1411" selection-start-column="22" selection-end-line="1411" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Java/src/Chapter3/ClosestPair.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="271" column="5" selection-start-line="271" selection-start-column="5" selection-end-line="271" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -401,7 +398,7 @@
       </state>
       <state key="FacetStructureConfigurable.UI">
         <settings>
-          <last-edited />
+          <last-edited>No facets are configured</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
@@ -436,7 +433,7 @@
       </state>
       <state key="ModuleStructureConfigurable.UI">
         <settings>
-          <last-edited />
+          <last-edited>Algorithms Book</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
