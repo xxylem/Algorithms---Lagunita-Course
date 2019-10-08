@@ -1,3 +1,5 @@
+package Chapter3;
+
 import java.util.Arrays;
 
 public class SortAndCountInv {
@@ -60,7 +62,7 @@ public class SortAndCountInv {
             int leftInv = C.getInversions();
             int rightInv = D.getInversions();
 
-            // MergeSort the lists and count the split inversions.
+            // Chapter1.MergeSort the lists and count the split inversions.
             InvList B = mergeCountSplitInv(C, D);
             int splitInv = B.getInversions();
             B.setInversions(leftInv + rightInv + splitInv);

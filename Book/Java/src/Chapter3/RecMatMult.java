@@ -1,3 +1,5 @@
+package Chapter3;
+
 import java.util.Arrays;
 
 public class RecMatMult {
@@ -21,7 +23,7 @@ public class RecMatMult {
 
     }
 
-    //  RecMatMult
+    //  Chapter3.RecMatMult
     //  Input: n x n integer matrices X and Y.
     //  Output: Z = X · Y.
     //  Assumption: n is a power of 2.

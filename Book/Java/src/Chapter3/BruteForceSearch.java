@@ -1,3 +1,5 @@
+package Chapter3;
+
 public class BruteForceSearch {
 
     public static void main(String[] args) {

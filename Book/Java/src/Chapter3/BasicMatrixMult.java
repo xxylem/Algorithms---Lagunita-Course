@@ -1,3 +1,5 @@
+package Chapter3;
+
 import java.util.Arrays;
 
 public class BasicMatrixMult {

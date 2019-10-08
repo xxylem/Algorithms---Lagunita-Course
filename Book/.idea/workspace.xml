@@ -24,11 +24,38 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RecMatMult.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="RecMatMult.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Java/src/RecMatMult.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="2288">
               <caret line="107" column="42" selection-start-line="107" selection-start-column="42" selection-end-line="107" selection-end-column="42" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MergeSort.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Java/src/Chapter1/MergeSort.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="220">
+              <caret line="19" column="5" lean-forward="true" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RecIntMult.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Java/src/Chapter1/RecIntMult.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="264">
+              <caret line="18" column="19" selection-start-line="18" selection-start-column="19" selection-end-line="18" selection-end-column="19" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RecIntMultVal.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Java/src/Chapter1/RecIntMultVal.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="44">
+              <caret line="2" selection-start-line="2" selection-end-line="2" />
             </state>
           </provider>
         </entry>
@@ -58,10 +85,12 @@
         <option value="$PROJECT_DIR$/Java/src/SortAndCountInv.java" />
         <option value="$PROJECT_DIR$/Java/src/BasicMatrixMult.java" />
         <option value="$PROJECT_DIR$/Java/src/RecMatMult.java" />
+        <option value="$PROJECT_DIR$/Java/src/Chapter1/RecIntMultVal.java" />
+        <option value="$PROJECT_DIR$/Java/src/Chapter1/RecIntMult.java" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="y" value="22" />
     <option name="width" value="1207" />
     <option name="height" value="788" />
@@ -83,34 +112,31 @@
             <path>
               <item name="Algorithms Book" type="b2602c69:ProjectViewProjectNode" />
               <item name="Book" type="462c0819:PsiDirectoryNode" />
-              <item name="Java" type="462c0819:PsiDirectoryNode" />
+              <item name="Haskell" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Algorithms Book" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Book" type="462c0819:PsiDirectoryNode" />
+              <item name="Haskell" type="462c0819:PsiDirectoryNode" />
+              <item name="Chapter 1" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Algorithms Book" type="b2602c69:ProjectViewProjectNode" />
               <item name="Book" type="462c0819:PsiDirectoryNode" />
               <item name="Java" type="462c0819:PsiDirectoryNode" />
-              <item name="out" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Algorithms Book" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Book" type="462c0819:PsiDirectoryNode" />
-              <item name="Java" type="462c0819:PsiDirectoryNode" />
-              <item name="out" type="462c0819:PsiDirectoryNode" />
-              <item name="production" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Algorithms Book" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Book" type="462c0819:PsiDirectoryNode" />
-              <item name="Java" type="462c0819:PsiDirectoryNode" />
-              <item name="out" type="462c0819:PsiDirectoryNode" />
-              <item name="production" type="462c0819:PsiDirectoryNode" />
-              <item name="Algorithms Book" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Algorithms Book" type="b2602c69:ProjectViewProjectNode" />
               <item name="Book" type="462c0819:PsiDirectoryNode" />
               <item name="Java" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Algorithms Book" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Book" type="462c0819:PsiDirectoryNode" />
+              <item name="Java" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Chapter1" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -144,31 +170,49 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.RecMatMult">
+  <component name="RunManager" selected="Application.SortAndCountInv">
     <configuration name="BasicMatrixMult" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="BasicMatrixMult" />
+      <option name="MAIN_CLASS_NAME" value="Chapter3.BasicMatrixMult" />
       <module name="Algorithms Book" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
     </configuration>
     <configuration name="BruteForceSearch" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="BruteForceSearch" />
+      <option name="MAIN_CLASS_NAME" value="Chapter3.BruteForceSearch" />
       <module name="Algorithms Book" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Chapter3.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
     </configuration>
-    <configuration name="MergeSort" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="MergeSort" />
+    <configuration name="RecIntMult" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Chapter1.RecIntMult" />
       <module name="Algorithms Book" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Chapter1.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
     </configuration>
     <configuration name="RecMatMult" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="RecMatMult" />
+      <option name="MAIN_CLASS_NAME" value="Chapter3.RecMatMult" />
       <module name="Algorithms Book" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
     </configuration>
     <configuration name="SortAndCountInv" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="SortAndCountInv" />
+      <option name="MAIN_CLASS_NAME" value="Chapter3.SortAndCountInv" />
       <module name="Algorithms Book" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Chapter3.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -194,19 +238,19 @@
       <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
     </configuration>
     <list>
-      <item itemvalue="Application.MergeSort" />
-      <item itemvalue="Application.BruteForceSearch" />
-      <item itemvalue="Application.SortAndCountInv" />
       <item itemvalue="Application.BasicMatrixMult" />
       <item itemvalue="Application.RecMatMult" />
+      <item itemvalue="Application.RecIntMult" />
+      <item itemvalue="Application.BruteForceSearch" />
+      <item itemvalue="Application.SortAndCountInv" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.RecMatMult" />
-        <item itemvalue="Application.BasicMatrixMult" />
         <item itemvalue="Application.SortAndCountInv" />
+        <item itemvalue="Application.RecMatMult" />
         <item itemvalue="Application.BruteForceSearch" />
-        <item itemvalue="Application.MergeSort" />
+        <item itemvalue="Application.BasicMatrixMult" />
+        <item itemvalue="Application.RecIntMult" />
       </list>
     </recent_temporary>
   </component>
@@ -224,7 +268,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -234,12 +278,12 @@
       <window_info anchor="right" id="Capture Analysis" />
       <window_info anchor="bottom" id="Event Log" side_tool="true" weight="0.3290938" />
       <window_info anchor="bottom" id="Version Control" show_stripe_button="false" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3290938" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.3290938" />
       <window_info anchor="bottom" id="Terminal" />
       <window_info id="Capture Tool" />
       <window_info id="Designer" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24963397" />
-      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24963397" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3290938" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Theme Preview" />
       <window_info id="Favorites" side_tool="true" />
@@ -257,13 +301,6 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/Java/src/RecIntMult.java</url>
-          <line>5</line>
-          <properties />
-        </line-breakpoint>
-      </breakpoints>
       <option name="time" value="3" />
     </breakpoint-manager>
     <watches-manager>
@@ -281,20 +318,6 @@
             <element signature="e#81433#81434#0" expanded="true" />
             <element signature="e#81475#81476#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Java/src/RecIntMult.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="193">
-          <caret line="10" column="39" selection-start-line="10" selection-start-column="39" selection-end-line="10" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Java/src/RecIntMultVal.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-22">
-          <caret line="40" column="51" selection-start-line="40" selection-start-column="51" selection-end-line="40" selection-end-column="51" />
         </state>
       </provider>
     </entry>
@@ -319,13 +342,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Java/src/MergeSort.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
-          <caret line="21" column="25" selection-start-line="21" selection-start-column="25" selection-end-line="21" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Java/src/BasicMatrixMult.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="242">
@@ -347,6 +363,27 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Java/src/Chapter1/MergeSort.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="19" column="5" lean-forward="true" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Java/src/Chapter1/RecIntMultVal.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="44">
+          <caret line="2" selection-start-line="2" selection-end-line="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Java/src/Chapter1/RecIntMult.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="18" column="19" selection-start-line="18" selection-start-column="19" selection-end-line="18" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
   </component>
   <component name="masterDetails">
     <states>
@@ -364,7 +401,7 @@
       </state>
       <state key="FacetStructureConfigurable.UI">
         <settings>
-          <last-edited>No facets are configured</last-edited>
+          <last-edited />
           <splitter-proportions>
             <option name="proportions">
               <list>
@@ -399,7 +436,7 @@
       </state>
       <state key="ModuleStructureConfigurable.UI">
         <settings>
-          <last-edited>Algorithms Book</last-edited>
+          <last-edited />
           <splitter-proportions>
             <option name="proportions">
               <list>
