@@ -1,23 +1,43 @@
 package Chapter3;
 
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.util.Arrays;
+import java.util.List;
+import java.util.stream.Collectors;
 
 public class SortAndCountInv {
 
     public static void main(String[] args) {
 
-        int[] A_arr = {6, 5, 4, 3, 2, 1};
+        List<Integer> ints = null;
+        try {
+            ints = Files.lines(Paths.get("Java/src/Chapter3/IntegerArray.txt"))
+                    .map(Integer::parseInt)
+                    .collect(Collectors.toList());
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
 
-        InvList A = new InvList(A_arr);
-        InvList B = A.sortCount();
+        int[] intsArr = ints.stream().mapToInt(i -> i).toArray();
+        InvList intsIL = new InvList(intsArr);
+        InvList intsILcounted = intsIL.sortCount();
+        System.out.println(intsILcounted.getInversions());
 
-        System.out.println(B);
+
+//        int[] A_arr = {6, 5, 4, 3, 2, 1};
+//
+//        InvList A = new InvList(A_arr);
+//        InvList B = A.sortCount();
+//
+//        System.out.println(B);
 
     }
 
     private static class InvList {
 
-        private int inversions;
+        private long inversions;
         private int[] A;
 
         public InvList (int[] A){
@@ -27,12 +47,12 @@ public class SortAndCountInv {
         }
 
         // Getters
-        int getInversions() { return inversions; }
+        long getInversions() { return inversions; }
         int[] getArray() { return A; }
         public int getLength() { return A.length; }
 
         // Setter (used by mergeCountSplitInv()
-        void setInversions(int invs) { inversions = invs;}
+        void setInversions(long invs) { inversions = invs;}
 
         // Returns a new InvList consisting of:
         //     A sorted version of A (the int[] array)
@@ -59,12 +79,12 @@ public class SortAndCountInv {
             // Sort the half InvLists and count the number of inversions in them.
             C = C.sortCount();
             D = D.sortCount();
-            int leftInv = C.getInversions();
-            int rightInv = D.getInversions();
+            long leftInv = C.getInversions();
+            long rightInv = D.getInversions();
 
             // Chapter1.MergeSort the lists and count the split inversions.
             InvList B = mergeCountSplitInv(C, D);
-            int splitInv = B.getInversions();
+            long splitInv = B.getInversions();
             B.setInversions(leftInv + rightInv + splitInv);
 
             return B;
