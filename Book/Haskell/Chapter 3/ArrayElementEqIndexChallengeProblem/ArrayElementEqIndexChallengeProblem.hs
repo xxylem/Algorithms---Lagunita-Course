@@ -5,9 +5,10 @@ import Data.Array
 -- Given a sorted array (smallest to largest) of n distinct integers
 -- (positive, negative, or zero), return True if there exists an
 --  index i such that the element at that index is equal to the index.
--- 
+
 -- INPUT: A sorted array of n distinct integers, arr.
 -- OUTPUT: True if there is i s.t. arr ! i == i. False otherwise.
+-- ASSUMES: 1-indexing in the array.
 arrayElementEqIndex :: Array Integer Integer -> Bool
 arrayElementEqIndex arr =
     -- Start the search with the full range of the array.

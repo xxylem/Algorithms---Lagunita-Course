@@ -15,11 +15,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="UnimodalMaxChallengeProblem.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="UnimodalMaxChallengeProblem.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Java/src/Chapter3/UnimodalMaxChallengeProblem.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="132">
-              <caret line="25" column="8" lean-forward="true" selection-start-line="25" selection-start-column="8" selection-end-line="30" selection-end-column="42" />
+              <caret line="6" column="8" lean-forward="true" selection-start-line="6" selection-start-column="8" selection-end-line="22" selection-end-column="58" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ArrayElementEqIndexChallengeProblem.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Java/src/Chapter3/ArrayElementEqIndexChallengeProblem.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="308">
+              <caret line="28" column="61" selection-start-line="28" selection-start-column="61" selection-end-line="28" selection-end-column="61" />
             </state>
           </provider>
         </entry>
@@ -55,6 +64,7 @@
         <option value="$PROJECT_DIR$/Java/src/Chapter3/ClosestPair.java" />
         <option value="$PROJECT_DIR$/Java/src/Chapter3/FastPower.java" />
         <option value="$PROJECT_DIR$/Java/src/Chapter3/UnimodalMaxChallengeProblem.java" />
+        <option value="$PROJECT_DIR$/Java/src/Chapter3/ArrayElementEqIndexChallengeProblem.java" />
       </list>
     </option>
   </component>
@@ -152,7 +162,18 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.UnimodalMaxChallengeProblem">
+  <component name="RunManager" selected="Application.ArrayElementEqIndexChallengeProblem">
+    <configuration name="ArrayElementEqIndexChallengeProblem" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Chapter3.ArrayElementEqIndexChallengeProblem" />
+      <module name="Algorithms Book" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Chapter3.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+    </configuration>
     <configuration name="ClosestPair" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Chapter3.ClosestPair" />
       <module name="Algorithms Book" />
@@ -174,11 +195,6 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-    </configuration>
-    <configuration name="RecMatMult" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Chapter3.RecMatMult" />
-      <module name="Algorithms Book" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
     </configuration>
     <configuration name="SortAndCountInv" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Chapter3.SortAndCountInv" />
@@ -226,19 +242,19 @@
       <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
     </configuration>
     <list>
-      <item itemvalue="Application.RecMatMult" />
       <item itemvalue="Application.SortAndCountInv" />
       <item itemvalue="Application.ClosestPair" />
       <item itemvalue="Application.FastPower" />
       <item itemvalue="Application.UnimodalMaxChallengeProblem" />
+      <item itemvalue="Application.ArrayElementEqIndexChallengeProblem" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.ArrayElementEqIndexChallengeProblem" />
         <item itemvalue="Application.UnimodalMaxChallengeProblem" />
         <item itemvalue="Application.FastPower" />
         <item itemvalue="Application.ClosestPair" />
         <item itemvalue="Application.SortAndCountInv" />
-        <item itemvalue="Application.RecMatMult" />
       </list>
     </recent_temporary>
   </component>
@@ -266,11 +282,11 @@
       <window_info anchor="right" id="Capture Analysis" />
       <window_info anchor="bottom" id="Event Log" side_tool="true" weight="0.3290938" />
       <window_info anchor="bottom" id="Version Control" show_stripe_button="false" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3290938" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.3290938" />
       <window_info anchor="bottom" id="Terminal" />
       <window_info id="Capture Tool" />
       <window_info id="Designer" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24963397" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24963397" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3290938" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Theme Preview" />
@@ -410,7 +426,14 @@
     <entry file="file://$PROJECT_DIR$/Java/src/Chapter3/UnimodalMaxChallengeProblem.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="132">
-          <caret line="25" column="8" lean-forward="true" selection-start-line="25" selection-start-column="8" selection-end-line="30" selection-end-column="42" />
+          <caret line="6" column="8" lean-forward="true" selection-start-line="6" selection-start-column="8" selection-end-line="22" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Java/src/Chapter3/ArrayElementEqIndexChallengeProblem.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="28" column="61" selection-start-line="28" selection-start-column="61" selection-end-line="28" selection-end-column="61" />
         </state>
       </provider>
     </entry>
@@ -431,7 +454,7 @@
       </state>
       <state key="FacetStructureConfigurable.UI">
         <settings>
-          <last-edited>No facets are configured</last-edited>
+          <last-edited />
           <splitter-proportions>
             <option name="proportions">
               <list>
@@ -466,7 +489,7 @@
       </state>
       <state key="ModuleStructureConfigurable.UI">
         <settings>
-          <last-edited>Algorithms Book</last-edited>
+          <last-edited />
           <splitter-proportions>
             <option name="proportions">
               <list>
