@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include <stdbool.h>
 
 struct IntPair {
 	int left;
@@ -89,7 +88,7 @@ int rec_int_mult(x, y) {
 	int nx = number_of_digits(x);
 	int ny = number_of_digits(y);
 
-	if (nx == 1 && ny == 1) {
+	if (nx == 1) {
 		return x * y;
 	}
 
@@ -115,7 +114,7 @@ int rec_int_mult(x, y) {
 
 void main() {
 	
-	for (int i = 0; i < 10; i++) {
+	/*for (int i = 0; i < 10; i++) {
 		for (int j = 0; j < 10; j++) {
 			if (rec_int_mult(i, j) != i * j) {
 				printf("Error with numbers %d and %d.\n", i, j);
@@ -134,9 +133,9 @@ void main() {
 				return -1;
 			}
 		}
-	}
-	for (int i = 1000; i < 10000; i++) {
-		for (int j = 1000; j < 10000; j++) {
+	}*/
+	for (int i = 1000; i < 10000; i += 15) {
+		for (int j = 1000; j < 10000; j += 13) {
 			if (rec_int_mult(i, j) != i * j) {
 				printf("Error with numbers %d and %d.\n", i, j);
 				printf("Rec_int_mult result: %d\n", rec_int_mult(i, j));
