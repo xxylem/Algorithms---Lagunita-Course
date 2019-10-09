@@ -1,0 +1,5 @@
+﻿  RecIntMult.c
+C:\Computer Science and Maths\Computer Science\Algorithms (Stanford)\git\Algorithms---Lagunita-Course\Book\C and C++\RecIntMult.c(124,14): warning C4098: 'main': 'void' function returning a value
+C:\Computer Science and Maths\Computer Science\Algorithms (Stanford)\git\Algorithms---Lagunita-Course\Book\C and C++\RecIntMult.c(134,14): warning C4098: 'main': 'void' function returning a value
+C:\Computer Science and Maths\Computer Science\Algorithms (Stanford)\git\Algorithms---Lagunita-Course\Book\C and C++\RecIntMult.c(144,14): warning C4098: 'main': 'void' function returning a value
+  C and C++.vcxproj -> C:\Computer Science and Maths\Computer Science\Algorithms (Stanford)\git\Algorithms---Lagunita-Course\Book\C and C++\Debug\C and C++.exe
