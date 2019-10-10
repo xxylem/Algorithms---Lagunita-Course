@@ -2,6 +2,7 @@
   <dictionary name="joshu">
     <words>
       <w>mult</w>
+      <w>subarray</w>
     </words>
   </dictionary>
 </component>
