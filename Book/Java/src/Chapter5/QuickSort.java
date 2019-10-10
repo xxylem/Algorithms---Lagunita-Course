@@ -23,13 +23,13 @@ public class QuickSort {
 
         // Work through the subarray, starting after the pivot.
         // There are five key zones (which may or may not be empty) in the subarray:
-        // arr_i[left]:                      The pivot (does not move in this loop).
-        // arr_i[left + 1] -> arr_i[i - 1]:  Entries that are smaller than the pivot.
-        // arr_i[i] -> arr_i[j - 1]:         Entries that are larger than the pivot.
-        // arr_i[j]:                         The current entry being considered. If it is larger than the pivot,
+        // arr[left]:                   The pivot (does not move in this loop).
+        // arr[left + 1] -> arr[i - 1]: Entries that are smaller than the pivot.
+        // arr[i] -> arr[j - 1]:        Entries that are larger than the pivot.
+        // arr[j]:                      The current entry being considered. If it is larger than the pivot,
         //                                       it stays here. If it is smaller, it swaps with arr_i[i]
         //                                       (which currently contains something larger than the pivot.
-        // arr_i[j + 1] -> arr_i[right]: Entries that have not been processed yet.
+        // arr[j + 1] -> arr_i[right]:  Entries that have not been processed yet.
         int i = left + 1;
         for (int j = left + 1; j <= right; j++) {
             if (arr[j] < pivot) {
