@@ -43,7 +43,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python tests.Unittests for r_select_test.RSelectTest">
+  <component name="RunManager" selected="Python tests.Unittests in quick_sort_test.py">
     <configuration name="Unittests for quick_sort_test.PartitionTest" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
       <module name="Python" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -116,9 +116,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python tests.Unittests in quick_sort_test.py" />
         <item itemvalue="Python tests.Unittests for r_select_test.RSelectTest" />
         <item itemvalue="Python tests.Unittests for r_select_test.RSelectTest.test_empty_array_throws_value_error" />
-        <item itemvalue="Python tests.Unittests in quick_sort_test.py" />
         <item itemvalue="Python tests.Unittests for quick_sort_test.QuickSortTest.test_longer_sorts" />
         <item itemvalue="Python tests.Unittests for quick_sort_test.PartitionTest" />
       </list>
