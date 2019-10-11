@@ -1,4 +1,4 @@
-from ListTools.list_tools import choose_random_pivot, partition_subsection_of_list_with_pivot_at_left, swap_two_elements_by_indices
+from ListTools.list_tools import choose_random_pivot, partition_subsection_of_list_using_pivot_index
 
 
 def r_select(integers, i):
@@ -24,11 +24,8 @@ def r_select(integers, i):
 
         pivot_index = choose_random_pivot(left, right)
 
-        # Move the pivot element to the left of the sublist.
-        swap_two_elements_by_indices(integers, left, pivot_index)
-
         # Update the pivot index after partitioning the sublist around the pivot element.
-        pivot_index = partition_subsection_of_list_with_pivot_at_left(integers, left, right)
+        pivot_index = partition_subsection_of_list_using_pivot_index(integers, left, right, pivot_index)
 
         # Found the ith order element.
         if pivot_index == i:

@@ -19,6 +19,17 @@ def swap_two_elements_by_indices(integers, i, j):
     integers[i] = temp
 
 
+def partition_subsection_of_list_using_pivot_index(integers, left, right, pivot_index):
+    """ Input: list of n distinct integers, left and right
+                    endpoints left, right in {0, 1, 2, . . . , n-1} with left <= right
+                    and the index of the pivot
+            Postcondition: elements of the sublist [integers[left], integers[left + 1],
+                                ..., integers[right]] are partitioned around integers[pivot_index].
+            Output: final position of pivot element."""
+    swap_two_elements_by_indices(integers, left, pivot_index)
+    return partition_subsection_of_list_with_pivot_at_left(integers, left, right)
+
+
 def partition_subsection_of_list_with_pivot_at_left(integers, left, right):
     """ Input: list of n distinct integers, left and right
                 endpoints left, right in {0, 1, 2, . . . , n-1} with left <= right.

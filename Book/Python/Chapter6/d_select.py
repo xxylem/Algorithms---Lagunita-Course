@@ -1,4 +1,4 @@
-from ListTools.list_tools import partition_subsection_of_list_with_pivot_at_left, swap_two_elements_by_indices
+from ListTools.list_tools import partition_subsection_of_list_using_pivot_index, swap_two_elements_by_indices
 
 
 def get_list_of_medians(integers, left, right):
@@ -40,18 +40,24 @@ def d_select(integers, i):
         if left >= right:
             return integers[left]
 
-        size_sublist = 1 + right - left
-
+        # First-round winners. The median of each group of five integers between left and right in the list integers.
         medians = get_list_of_medians(integers, left, right)
 
-        pivot = d_select(medians, min(size_sublist // 10, len(medians) - 1))
-        pivot_index = integers.index(pivot) ## TODO this is bad, can we keep track of the pivot index?
+        # TODO this is bad, can we keep track of the pivot index?
+        # Problem: we need to move the median from each group of five in the sublist over to
+        # the list medians. When we do this, we have no idea what entry they came from.
+        # Consequence: We have to search back through the list of integers to find the original index that the
+        # median of medians was located at.
+        # Solution: (?) create a dictionary or similar linking the value of each element in medians to
+        # an index in integers.
+        pivot = d_select(medians, min((1 + right - left) // 10, len(medians) - 1))
+        pivot_index = integers.index(pivot)
 
         # Move the pivot element to the left of the sublist.
         swap_two_elements_by_indices(integers, left, pivot_index)
 
         # Update the pivot index after partitioning the sublist around the pivot element.
-        pivot_index = partition_subsection_of_list_with_pivot_at_left(integers, left, right)
+        pivot_index = partition_subsection_of_list_using_pivot_index(integers, left, right, pivot_index)
 
         # Found the ith order element.
         if pivot_index == i:
