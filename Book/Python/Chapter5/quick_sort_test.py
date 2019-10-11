@@ -6,13 +6,13 @@ import Chapter5.quick_sort as qs
 class SwapTest(unittest.TestCase):
     def test_two_elements(self):
         a = [1, 2]
-        qs.swap(a, 0, 1)
+        qs.swap_two_elements_by_indices(a, 0, 1)
         b = [2, 1]
-        qs.swap(b, 0, 1)
+        qs.swap_two_elements_by_indices(b, 0, 1)
         c = [1, 2]
-        qs.swap(c, 1, 0)
+        qs.swap_two_elements_by_indices(c, 1, 0)
         d = [2, 1]
-        qs.swap(d, 1, 0)
+        qs.swap_two_elements_by_indices(d, 1, 0)
         self.assertEqual([2, 1], a)
         self.assertEqual([1, 2], b)
         self.assertEqual([2, 1], c)
@@ -20,20 +20,20 @@ class SwapTest(unittest.TestCase):
 
     def test_more_elements(self):
         a = [5, 6, 2, 6, 20, 34, 10]
-        qs.swap(a, 2, 5)
+        qs.swap_two_elements_by_indices(a, 2, 5)
         self.assertEqual([5, 6, 34, 6, 20, 2, 10], a)
 
 
 class PartitionTest(unittest.TestCase):
     def test_two_elements(self):
         a = [1, 2]
-        j = qs.partition(a, 0, 1)
+        j = qs.partition_list_with_pivot_at_start(a, 0, 1)
         self.assertEqual(0, j)
         self.assertEqual([1, 2], a)
 
     def test_two_elem_subarray(self):
         a = [1, 2, 3, 5, 4, 6, 7, 8, 9, 10]
-        j = qs.partition(a, 3, 6)
+        j = qs.partition_list_with_pivot_at_start(a, 3, 6)
         self.assertEqual(4, j)
         self.assertEqual([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], a)
 
