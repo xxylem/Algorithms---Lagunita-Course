@@ -29,9 +29,9 @@ class RSelectTest(unittest.TestCase):
 
         for i in range(1, 1001):
             rand_list = [random.randint(0, i) for j in range(i)]
-            rand_index = random.randint(0, i)
+            rand_index = random.randint(0, i - 1)
             rand_list_copy = rand_list.copy()
-            r_select_res = r_select(l, rand_index)
+            r_select_res = r_select(rand_list, rand_index)
             rand_list_copy.sort()
             self.assertEqual(r_select_res, rand_list_copy[rand_index])
 
