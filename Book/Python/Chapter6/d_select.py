@@ -1,10 +1,22 @@
 from ListTools.list_tools import choose_random_pivot, partition_subsection_of_list_with_pivot_at_left, swap_two_elements_by_indices
 
 
-def median_of_five_or_less_element_subarray(integers, left, right):
-    integers_copy = integers.copy()
-    integers_copy.sort()
-    return integers_copy[(left + right) // 2] ## TODO move back into main function
+def get_list_of_medians(integers, left, right):
+    """ Input: a list of n >= 2 distinct integers and endpoints left and right (inclusive).
+        Output: list of containing the median of every group of 5 elements between left and right (inclusive). """
+
+    medians = []
+    start = left
+    end = min(right, start + 5)
+    while start != end:
+        sublist = integers[start: end + 1]
+        # sublist.sort()
+        medians.append(sublist[len(sublist) // 2])
+        temp = start
+        start = end
+        end = min(right, temp + 5)
+
+    return medians
 
 
 def d_select(integers, i):
@@ -29,24 +41,8 @@ def d_select(integers, i):
             return integers[left]
 
         size_sublist = 1 + right - left
-        #
-        # indices = [x for x in range(0, size_sublist) if x % 5 == 2]
-        # if not indices:
-        #     indices = [size_sublist // 2]
-        #
-        # medians = []
-        #
-        # for h in range(len(indices)):
-        #     medians.append(integers[indices[h]])
 
-        medians = []
-        start = left
-        end = min(right, start + 5)
-        while start != end:
-            medians.append(median_of_five_or_less_element_subarray(integers, start, end))
-            temp = start
-            start = end
-            end = min(right, temp + 5) ## TODO or move this up to the medians
+        medians = get_list_of_medians(integers, left, right)
 
         pivot = d_select(medians, min(size_sublist // 10, len(medians) - 1))
         pivot_index = integers.index(pivot) ## TODO this is bad, can we keep track of the pivot index?
