@@ -1,9 +1,10 @@
-def r_select(arr):
+def r_select(array, index):
 
-    if not arr:
+    if not array:
         raise ValueError("Input array must be nonempty.")
 
-    n = len(arr)
+    array_length = len(array)
 
-    if n == 1:
-        return arr[0]
+    if array_length == 1:
+        return array[0]
+
