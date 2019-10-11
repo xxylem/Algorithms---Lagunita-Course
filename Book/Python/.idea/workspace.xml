@@ -22,6 +22,7 @@
   <component name="ProjectId" id="1Ry4hVHTEZ9I4HefgghQbp1xTCE" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
+    <property name="last_opened_file_path" value="$USER_HOME$/Exercism/python/raindrops" />
     <property name="settings.editor.selected.configurable" value="preferences.editor" />
   </component>
   <component name="RecentsManager">
@@ -42,7 +43,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python tests.Unittests in quick_sort_test.py">
+  <component name="RunManager" selected="Python tests.Unittests for r_select_test.RSelectTest">
     <configuration name="Unittests for quick_sort_test.PartitionTest" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
       <module name="Python" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -71,31 +72,31 @@
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="Unittests for quick_sort_test.SwapTest" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+    <configuration name="Unittests for r_select_test.RSelectTest" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
       <module name="Python" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Chapter5" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Chapter6" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;quick_sort_test.SwapTest&quot;" />
+      <option name="_new_target" value="&quot;r_select_test.RSelectTest&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="Unittests for quick_sort_test.SwapTest.test_two_elements" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+    <configuration name="Unittests for r_select_test.RSelectTest.test_empty_array_throws_value_error" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
       <module name="Python" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Chapter5" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Chapter6" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;quick_sort_test.SwapTest.test_two_elements&quot;" />
+      <option name="_new_target" value="&quot;r_select_test.RSelectTest.test_empty_array_throws_value_error&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
@@ -115,11 +116,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python tests.Unittests for r_select_test.RSelectTest" />
+        <item itemvalue="Python tests.Unittests for r_select_test.RSelectTest.test_empty_array_throws_value_error" />
         <item itemvalue="Python tests.Unittests in quick_sort_test.py" />
         <item itemvalue="Python tests.Unittests for quick_sort_test.QuickSortTest.test_longer_sorts" />
         <item itemvalue="Python tests.Unittests for quick_sort_test.PartitionTest" />
-        <item itemvalue="Python tests.Unittests for quick_sort_test.SwapTest" />
-        <item itemvalue="Python tests.Unittests for quick_sort_test.SwapTest.test_two_elements" />
       </list>
     </recent_temporary>
   </component>
