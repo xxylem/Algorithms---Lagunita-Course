@@ -6,7 +6,7 @@ def choose_random_pivot(left, right):
         Output: an i in {left, left + 1, . . . , right}.
         Note: Pivot is chosen uniformly at random. """
 
-    return random.randrange(left, right + 1)
+    return random.randrange(left, right + 1)   # (right + 1) because the upper bound in randrange is exclusive.
 
 
 def swap_two_elements_by_indices(integers, i, j):
@@ -19,11 +19,11 @@ def swap_two_elements_by_indices(integers, i, j):
     integers[i] = temp
 
 
-def partition_list_with_pivot_at_start(integers, left, right):
+def partition_subsection_of_list_with_pivot_at_left(integers, left, right):
     """ Input: list of n distinct integers, left and right
                 endpoints left, right in {0, 1, 2, . . . , n-1} with left <= right.
-        Postcondition: elements of the subarray
-                        integers[left], integers[left + 1],..., integers[right] are partitioned around integers[left].
+        Postcondition: elements of the sublist [integers[left], integers[left + 1],
+                            ..., integers[right]] are partitioned around integers[left].
         Output: final position of pivot element."""
 
     # The pivot is given to be the leftmost entry.

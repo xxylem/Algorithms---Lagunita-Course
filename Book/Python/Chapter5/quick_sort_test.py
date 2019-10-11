@@ -27,13 +27,13 @@ class SwapTest(unittest.TestCase):
 class PartitionTest(unittest.TestCase):
     def test_two_elements(self):
         a = [1, 2]
-        j = qs.partition_list_with_pivot_at_start(a, 0, 1)
+        j = qs.partition_subsection_of_list_with_pivot_at_left(a, 0, 1)
         self.assertEqual(0, j)
         self.assertEqual([1, 2], a)
 
     def test_two_elem_subarray(self):
         a = [1, 2, 3, 5, 4, 6, 7, 8, 9, 10]
-        j = qs.partition_list_with_pivot_at_start(a, 3, 6)
+        j = qs.partition_subsection_of_list_with_pivot_at_left(a, 3, 6)
         self.assertEqual(4, j)
         self.assertEqual([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], a)
 

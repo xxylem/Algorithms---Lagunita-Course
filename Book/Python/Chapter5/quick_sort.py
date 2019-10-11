@@ -1,4 +1,4 @@
-from ListTools.list_tools import swap_two_elements_by_indices, partition_list_with_pivot_at_start, choose_random_pivot
+from ListTools.list_tools import swap_two_elements_by_indices, partition_subsection_of_list_with_pivot_at_left, choose_random_pivot
 
 
 def quick_sort(integers):
@@ -18,7 +18,7 @@ def quick_sort(integers):
         swap_two_elements_by_indices(integers, left, i)
 
         # Partition the subarray based on the pivot
-        j = partition_list_with_pivot_at_start(integers, left, right)
+        j = partition_subsection_of_list_with_pivot_at_left(integers, left, right)
 
         # Recursively sort the subarrays either side of the pivot.
         helper(left, j - 1)
