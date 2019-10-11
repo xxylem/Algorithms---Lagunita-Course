@@ -13,6 +13,10 @@ Book/C and C++/.vs/C and C++/v16/ipch/AutoPCH/98bd50c5e631515f/RECINTMULT.ipch
 Book/C and C++/.vs/C and C++/v16/ipch/AutoPCH/c667a2bef0e26fa4/RECINTMULTCPP.ipch
 
 .idea
-.iml
 .vs
 .vscode
+Debug
+**/out/production/**
+venv
+*.iml
+*.class
