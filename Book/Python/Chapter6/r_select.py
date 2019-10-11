@@ -1,12 +1,15 @@
-def r_select(array, index):
+def r_select(integers, index):
+    """ Input: array A of n >= 1 distinct numbers, and an
+                integer i in {1, 2, . . . , n}.
+        Output: the ith order statistic of A. """
 
-    if not array:
+    if not integers:
         raise ValueError("Input array must be nonempty.")
 
-    array_length = len(array)
+    integers_length = len(integers)
 
-    if array_length == 1:
-        return array[0]
+    if integers_length == 1:
+        return integers[0]
 
 
 
