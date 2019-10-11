@@ -1,4 +1,4 @@
-from ListTools.list_tools import choose_random_pivot, partition_subsection_of_list_with_pivot_at_left, swap_two_elements_by_indices
+from ListTools.list_tools import partition_subsection_of_list_with_pivot_at_left, swap_two_elements_by_indices
 
 
 def get_list_of_medians(integers, left, right):
@@ -10,7 +10,7 @@ def get_list_of_medians(integers, left, right):
     end = min(right, start + 5)
     while start != end:
         sublist = integers[start: end + 1]
-        # sublist.sort()
+        sublist.sort()
         medians.append(sublist[len(sublist) // 2])
         temp = start
         start = end
