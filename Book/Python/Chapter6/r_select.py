@@ -1,2 +1,6 @@
 def r_select(arr):
-    pass
+
+    if not arr:
+        raise ValueError("Input array must be nonempty.")
+
+
