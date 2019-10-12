@@ -53,9 +53,6 @@ def d_select(integers, i):
         pivot = d_select(medians, min((1 + right - left) // 10, len(medians) - 1))
         pivot_index = integers.index(pivot)
 
-        # Move the pivot element to the left of the sublist.
-        swap_two_elements_by_indices(integers, left, pivot_index)
-
         # Update the pivot index after partitioning the sublist around the pivot element.
         pivot_index = partition_subsection_of_list_using_pivot_index(integers, left, right, pivot_index)
 
