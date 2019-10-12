@@ -23,6 +23,3 @@ checkListIsOrdered :: (Ord a) => [a] -> Bool
 checkListIsOrdered [] = True
 checkListIsOrdered [x] = True
 checkListIsOrdered (x1:x2:xs) = (x1 <= x2) && checkListIsOrdered (x2:xs)
-
-
-

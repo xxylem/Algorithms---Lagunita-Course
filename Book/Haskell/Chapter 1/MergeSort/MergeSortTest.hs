@@ -14,8 +14,6 @@ main = hspec $ do
         do modifyMaxSuccess (const 1000) $ it "propSortsStrings" $ property propSortsStrings
 
 
-
-
 propSortsIntegerLists :: [Integer] -> Bool
 propSortsIntegerLists xs =
     mergeSort xs == sort xs
