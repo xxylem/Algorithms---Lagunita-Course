@@ -3,8 +3,14 @@ module KaratsubaTest where
 import Test.QuickCheck
 import Test.Hspec
 import Test.Hspec.Core.QuickCheck (modifyMaxSize)
+import Control.Monad (guard)
 
 import Karatsuba (karatsuba)
+
+-- TODO modify tests s.t. only numbers of the same length and whose
+-- length is a power of two are generated for the tests.
+--    OR: upgrade Karatsuba function to operate on all integers.
+
 
 main :: IO ()
 main = hspec $ do
