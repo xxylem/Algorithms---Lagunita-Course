@@ -1,4 +1,12 @@
-module BruteForceSearch where
+---------------------------------------------------------
+-- Module: BruteForceSearch
+-- Counts the number of inversions in a list of items.
+-- An inversion is an element x > y s.t. appears before 
+-- y in the list (to the "left" of y).
+---------------------------------------------------------
+
+
+module BruteForceSearch (bruteForceSearch) where
 
 -- Input: array A of n distinct integers.
 -- Output: the number of inversions of A.
