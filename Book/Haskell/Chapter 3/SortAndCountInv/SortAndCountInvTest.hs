@@ -1,4 +1,4 @@
-module BruteForceSearchTest where
+module SortAndCountInvTest where
 
 import Data.List (sort)
 import Test.Hspec
@@ -6,14 +6,14 @@ import Test.QuickCheck
 
 import qualified Data.Set as Set
 
-import BruteForceSearch (bruteForceSearch)
+import SortAndCountInv (sortAndCountInv)
 
 
 main :: IO ()
 main = hspec $ do
-    describe "Testing BruteForceSearch: Counts inversions in lists." $ do
+    describe "Testing sortAndCountInv: Counts inversions in lists." $ do
         it "an empty list has no inversions" $ do
-            bruteForceSearch ([] :: [Integer]) `shouldBe` 0
+            sortAndCountInv ([] :: [Integer]) `shouldBe` ([], 0)
 
         it "sorted lists have no inversions" $ 
             property propSortedListsHaveZeroInversions
@@ -25,12 +25,12 @@ main = hspec $ do
             property propOneElementListsHaveZeroInversions
 
         it "test example lists from two to five elements" $ do
-            bruteForceSearch twoElem0inv `shouldBe` 0
-            bruteForceSearch twoElem1inv `shouldBe` 1
-            bruteForceSearch threeElem0inv `shouldBe` 0
-            bruteForceSearch threeElem1inv `shouldBe` 1
-            bruteForceSearch threeElem2inv `shouldBe` 2
-            bruteForceSearch threeElem3inv `shouldBe` 3
+            sortAndCountInv twoElem0inv `shouldBe` (sort twoElem0inv, 0)
+            sortAndCountInv twoElem1inv `shouldBe` (sort twoElem1inv, 1)
+            sortAndCountInv threeElem0inv `shouldBe` (sort threeElem0inv, 0)
+            sortAndCountInv threeElem1inv `shouldBe` (sort threeElem1inv, 1)
+            sortAndCountInv threeElem2inv `shouldBe` (sort threeElem2inv, 2)
+            sortAndCountInv threeElem3inv `shouldBe` (sort threeElem3inv, 3)
 
 -- Examples for Hspec
 twoElem0inv, twoElem1inv, threeElem0inv, 
@@ -45,16 +45,17 @@ threeElem3inv = [6, 5, 4]
 -- Properties for QuickCheck
 propOneElementListsHaveZeroInversions :: Integer -> Bool
 propOneElementListsHaveZeroInversions x =
-    bruteForceSearch [x] == 0
+    sortAndCountInv [x] == ([x], 0)
 
 propSortedListsHaveZeroInversions :: SortedList Integer -> Bool
-propSortedListsHaveZeroInversions xs =
-    bruteForceSearch (getSorted xs) == 0
+propSortedListsHaveZeroInversions sl =
+    sortAndCountInv xs == (xs, 0)
+    where xs = getSorted sl
 
 -- Using Set to generate the Integers guarantees there are no distinct elements.
 propReverseSortedListsHaveMaxInversions :: Set.Set Integer -> Bool
 propReverseSortedListsHaveMaxInversions intSet =
-    bruteForceSearch xs == toInteger (((n - 1) * n) `div` 2)
+    sortAndCountInv xs == (sort xs, ((n - 1) * n) `div` 2)
     where   xs = Set.toDescList intSet
             n = length xs
 
