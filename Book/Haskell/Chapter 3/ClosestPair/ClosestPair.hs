@@ -1,4 +1,4 @@
-module ClosestPair where
+module ClosestPair (sortByY, sortByX, Point(..), closestPair) where
 
 import Data.Sort as S
 
@@ -124,36 +124,3 @@ sortByX = S.sortBy (\p1 p2 -> compare (x p1) (x p2))
 sortByY :: [Point] -> [Point]
 sortByY = S.sortBy (\p1 p2 -> compare (y p1) (y p2))
 
--- Example points
-pt1 :: Point
-pt1 = Point 2 17
-pt2 :: Point
-pt2 = Point (-3) 2
-pt3 :: Point
-pt3 = Point 18 8
-pt4 :: Point
-pt4 = Point 27 0
-pt5 :: Point
-pt5 = Point 4 6
-pt6 :: Point
-pt6 = Point 9 12
-pt7 :: Point
-pt7 = Point 16 17
-pt8 :: Point
-pt8 = Point 1000 99
-pt9 :: Point
-pt9 = Point 17 16
-
--- List of example points
-points :: [Point]
-points = [pt1, pt2, pt3, pt4, pt5, pt6, pt7, pt8, pt9]
--- Same list, sorted by X-coordinates
-pointsX :: [Point]
-pointsX = sortByX points
--- Same list, sorted by Y-coordinates
-pointsY :: [Point]
-pointsY = sortByY points
-
--- The closest pair of the example list.
-closestPoints :: (Point, Point) 
-closestPoints = closestPair pointsX pointsY
