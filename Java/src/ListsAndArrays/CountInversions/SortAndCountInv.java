@@ -1,41 +1,10 @@
 package ListsAndArrays.CountInversions;
 
-import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.Paths;
 import java.util.Arrays;
-import java.util.List;
-import java.util.stream.Collectors;
 
 public class SortAndCountInv {
 
-    public static void main(String[] args) {
-
-        List<Integer> ints = null;
-        try {
-            ints = Files.lines(Paths.get("Java/src/Chapter3/IntegerArray.txt"))
-                    .map(Integer::parseInt)
-                    .collect(Collectors.toList());
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-
-        int[] intsArr = ints.stream().mapToInt(i -> i).toArray();
-        InvList intsIL = new InvList(intsArr);
-        InvList intsILcounted = intsIL.sortCount();
-        System.out.println(intsILcounted.getInversions());
-
-
-//        int[] A_arr = {6, 5, 4, 3, 2, 1};
-//
-//        InvList A = new InvList(A_arr);
-//        InvList B = A.sortCount();
-//
-//        System.out.println(B);
-
-    }
-
-    private static class InvList {
+    public static class InvList {
 
         private long inversions;
         private int[] A;
@@ -47,7 +16,7 @@ public class SortAndCountInv {
         }
 
         // Getters
-        long getInversions() { return inversions; }
+        public long getInversions() { return inversions; }
         int[] getArray() { return A; }
         public int getLength() { return A.length; }
 
@@ -57,7 +26,7 @@ public class SortAndCountInv {
         // Returns a new InvList consisting of:
         //     A sorted version of A (the int[] array)
         //     The number of inversions found while sorting.
-        private InvList sortCount() {
+        public InvList sortCount() {
 
             int len = A.length;
 
