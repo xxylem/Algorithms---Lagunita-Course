@@ -1,4 +1,4 @@
-package Chapter1;
+package Integers.Multiplication;
 
 public class RecIntMult {
 
@@ -10,7 +10,7 @@ public class RecIntMult {
 
         RecIntMultVal prod = x.multiply(y);
 
-        System.out.println("4003 * 7028 (Chapter1.RecIntMult)= ".concat(String.valueOf(prod.getVal())));
+        System.out.println("4003 * 7028 (Integers.Multiplication.RecIntMult)= ".concat(String.valueOf(prod.getVal())));
 
         System.out.println("Normal mult: ".concat(String.valueOf(4003 * 7028)));
 

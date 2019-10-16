@@ -1,4 +1,4 @@
-package Chapter5;
+package ListsAndArrays.Sort;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -6,7 +6,7 @@ import org.junit.jupiter.api.Test;
 import java.util.Arrays;
 import java.util.Random;
 
-import static Chapter5.QuickSort.quickSort;
+import static ListsAndArrays.Sort.QuickSort.quickSort;
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 
 class QuickSortTest {

@@ -1,6 +1,6 @@
-package Chapter3;
+package ListsAndArrays.Find;
 
-public class ArrayElementEqIndexChallengeProblem {
+public class ArrayElementEqIndex {
 
     public static void main(String[] args) {
 

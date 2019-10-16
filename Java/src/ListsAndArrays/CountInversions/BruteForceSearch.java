@@ -1,4 +1,4 @@
-package Chapter3;
+package ListsAndArrays.CountInversions;
 
 public class BruteForceSearch {
 

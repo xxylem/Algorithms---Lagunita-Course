@@ -1,4 +1,4 @@
-package Chapter5;
+package ListsAndArrays.Sort;
 
 import java.util.Random;
 

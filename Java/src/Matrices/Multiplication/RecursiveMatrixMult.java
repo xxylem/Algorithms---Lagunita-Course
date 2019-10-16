@@ -1,8 +1,8 @@
-package Chapter3;
+package Matrices.Multiplication;
 
 import java.util.Arrays;
 
-public class RecMatMult {
+public class RecursiveMatrixMult {
 
     public static void main(String[] args) {
 
@@ -23,7 +23,7 @@ public class RecMatMult {
 
     }
 
-    //  Chapter3.RecMatMult
+    //  Matrices.Multiplication.RecMatMult
     //  Input: n x n integer matrices X and Y.
     //  Output: Z = X · Y.
     //  Assumption: n is a power of 2.

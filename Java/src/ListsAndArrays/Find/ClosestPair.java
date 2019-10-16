@@ -1,4 +1,4 @@
-package Chapter3;
+package ListsAndArrays.Find;
 
 import java.util.Arrays;
 import java.util.Comparator;

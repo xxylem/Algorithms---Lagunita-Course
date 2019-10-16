@@ -1,6 +1,6 @@
-package Chapter3;
+package ListsAndArrays.Find;
 
-public class UnimodalMaxChallengeProblem {
+public class UnimodalMax {
 
     public static void main(String[] args) {
 

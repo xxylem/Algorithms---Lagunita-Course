@@ -1,4 +1,4 @@
-package Chapter3;
+package ListsAndArrays.CountInversions;
 
 import java.io.IOException;
 import java.nio.file.Files;
@@ -82,7 +82,7 @@ public class SortAndCountInv {
             long leftInv = C.getInversions();
             long rightInv = D.getInversions();
 
-            // Chapter1.MergeSort the lists and count the split inversions.
+            // ListsAndArrays.Sort.MergeSort the lists and count the split inversions.
             InvList B = mergeCountSplitInv(C, D);
             long splitInv = B.getInversions();
             B.setInversions(leftInv + rightInv + splitInv);

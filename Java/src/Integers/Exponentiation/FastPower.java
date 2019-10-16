@@ -1,4 +1,4 @@
-package Chapter3;
+package Integers.Exponentiation;
 
 public class FastPower {
 

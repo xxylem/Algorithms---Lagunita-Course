@@ -1,4 +1,4 @@
-package Chapter3;
+package Matrices.Multiplication;
 
 import java.util.Arrays;
 
