@@ -1,16 +1,5 @@
-module SortAndCountInv where
+module SortAndCountInv (sortAndCountInv) where
 
-main :: IO ()
-main = do
-    f <- readFile "IntegerArray.txt"
-    let ls = lines f
-        ints = map read ls :: [Integer]
-        (_, numInv) = sortAndCountInv ints
-    print numInv
-    return ()
-
-
--- 
 -- Input: array A of n distinct integers.
 -- Output: sorted array B with the same integers, and
 -- the number of inversions of A.

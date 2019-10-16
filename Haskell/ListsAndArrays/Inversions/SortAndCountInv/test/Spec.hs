@@ -1,16 +1,17 @@
-module SortAndCountInvTest where
+import           Data.List         (sort)
+import           Test.Hspec        (Spec, describe, it, shouldBe)
+import           Test.Hspec.Runner (configFastFail, defaultConfig, hspecWith)
+import           Test.QuickCheck   (SortedList, getSorted, property)
+import           Data.Set          (Set)
+import qualified Data.Set as S
 
-import Data.List (sort)
-import Test.Hspec
-import Test.QuickCheck
-
-import qualified Data.Set as Set
-
-import SortAndCountInv (sortAndCountInv)
-
+import SortAndCountInv             (sortAndCountInv)
 
 main :: IO ()
-main = hspec $ do
+main = hspecWith defaultConfig {configFastFail = True} specs
+
+specs :: Spec
+specs = do
     describe "Testing sortAndCountInv: Counts inversions in lists." $ do
         it "an empty list has no inversions" $ do
             sortAndCountInv ([] :: [Integer]) `shouldBe` ([], 0)
@@ -50,12 +51,12 @@ propOneElementListsHaveZeroInversions x =
 propSortedListsHaveZeroInversions :: SortedList Integer -> Bool
 propSortedListsHaveZeroInversions sl =
     sortAndCountInv xs == (xs, 0)
-    where xs = getSorted sl
+    where xs = getSorted sl :: [Integer]
 
 -- Using Set to generate the Integers guarantees there are no distinct elements.
-propReverseSortedListsHaveMaxInversions :: Set.Set Integer -> Bool
+propReverseSortedListsHaveMaxInversions :: Set Integer -> Bool
 propReverseSortedListsHaveMaxInversions intSet =
     sortAndCountInv xs == (sort xs, ((n - 1) * n) `div` 2)
-    where   xs = Set.toDescList intSet
+    where   xs = S.toDescList intSet
             n = length xs
 
