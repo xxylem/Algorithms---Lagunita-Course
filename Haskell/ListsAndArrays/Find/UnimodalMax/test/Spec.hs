@@ -1,7 +1,7 @@
+import           Control.Exception (evaluate)
 import qualified Data.Array as A
 import           Test.Hspec        (Spec, describe, it, shouldBe, shouldThrow, anyException)
 import           Test.Hspec.Runner (configFastFail, defaultConfig, hspecWith)
-import           Control.Exception (evaluate)
 
 import           UnimodalMax       (unimodalMax)
 

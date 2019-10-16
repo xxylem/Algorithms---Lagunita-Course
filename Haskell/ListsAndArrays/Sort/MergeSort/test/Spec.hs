@@ -1,13 +1,16 @@
-module MergeSortTest where
-
-import MergeSort (mergeSort)
-import Test.QuickCheck
+import Data.List                  (sort)
+import Test.Hspec                 (Spec, describe, it)
 import Test.Hspec.Core.QuickCheck (modifyMaxSuccess)
-import Test.Hspec
-import Data.List (sort)
+import Test.Hspec.Runner          (configFastFail, defaultConfig, hspecWith)
+import Test.QuickCheck            (property)
+
+import MergeSort                  (mergeSort)
 
 main :: IO ()
-main = hspec $ do
+main = hspecWith defaultConfig {configFastFail = True} specs
+
+specs :: Spec
+specs = do
     describe "MergeSort sorts lists of integers." $
         do modifyMaxSuccess (const 1000) $ it "propSortsIntegerLists" $ property propSortsIntegerLists
     describe "MergeSort sorts characters in strings." $
