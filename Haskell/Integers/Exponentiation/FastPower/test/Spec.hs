@@ -1,14 +1,16 @@
-module FastPowerTest where
-
-import Test.QuickCheck
-import Test.Hspec
+import Test.QuickCheck (Positive, getPositive, property)
+import Test.Hspec (Spec, hspec, describe, it)
 import Test.Hspec.Core.QuickCheck (modifyMaxSuccess)
+import Test.Hspec.Runner (configFastFail, defaultConfig, hspecWith)
 
 import FastPower (fastPower)
 
 
 main :: IO ()
-main = hspec $ do
+main = hspecWith defaultConfig {configFastFail = True} specs
+
+specs :: Spec
+specs = 
     describe "Test that fastPower computes powers of positive integers correctly" $ do
         modifyMaxSuccess (const 1000) $ it "Test correctness of fastPower" $ property propComputesPowers
 
