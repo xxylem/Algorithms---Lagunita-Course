@@ -4,22 +4,9 @@ import java.util.LinkedList;
 
 public class MergeSort {
 
-    public static void main(String[] args) {
-
-        LinkedList<Integer> xs = new LinkedList<>();
-        xs.add(7);
-        xs.add(2);
-        xs.add(3);
-        xs.add(1);
-        xs.add(9);
-        xs.add(5);
-        xs.add(4);
-
-        System.out.println(xs);
-        System.out.println(mergeSort(xs));
-    }
-
-    public static LinkedList<Integer> mergeSort(LinkedList<Integer> xs) {
+    /** Returns the list xs sorted in ascending order.
+     *  SIDE-EFFECTS: May destroy the input list. Use a copy if you want to preserve the original. */
+    static LinkedList<Integer> mergeSort(LinkedList<Integer> xs) {
 
         int len = xs.size();
 
