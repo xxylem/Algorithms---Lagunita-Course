@@ -2,21 +2,9 @@ package Integers.Multiplication;
 
 public class RecIntMult {
 
-
-    public static void main(String[] args) {
-
-        RecIntMultVal x = new RecIntMultVal(4003, 4);
-        RecIntMultVal y = new RecIntMultVal(7028, 4);
-
-        RecIntMultVal prod = x.multiply(y);
-
-        System.out.println("4003 * 7028 (Integers.Multiplication.RecIntMult)= ".concat(String.valueOf(prod.getVal())));
-
-        System.out.println("Normal mult: ".concat(String.valueOf(4003 * 7028)));
-
-    }
-
     private static class RecIntMultVal {
+
+        // TODO this needs a major rework.
 
         private final int val;
         private int num_digits;
@@ -44,7 +32,7 @@ public class RecIntMult {
 
             // Check for numbers with different numbers of digits
             if (num_digits != y.getNum_digits()) {
-                // Error TODO
+                throw new IllegalArgumentException("The number of digits in each number must be the same.");
             }
 
             // Base case: normal mult of one digit numbers
