@@ -22,11 +22,8 @@ description:         Please see the README on GitHub at <https://github.com/gith
 dependencies:
 - base >= 4.7 && < 5
 
-library:
-  source-dirs: src
-
 executables:
-  Assignments-exe:
+  Assignments:
     main:                Main.hs
     source-dirs:         app
     ghc-options:
@@ -34,7 +31,7 @@ executables:
     - -rtsopts
     - -with-rtsopts=-N
     dependencies:
-    - Assignments
+    - SortAndCountInv
 
 tests:
   Assignments-test:

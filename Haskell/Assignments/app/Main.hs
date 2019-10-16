@@ -3,7 +3,10 @@ module Main where
 import SortAndCountInv (sortAndCountInv)
 
 main :: IO ()
-main = do
+main = assignmentOne
+
+assignmentOne :: IO ()
+assignmentOne = do
     f <- readFile "IntegerArray.txt"
     let ls = lines f
         ints = map read ls :: [Integer]
