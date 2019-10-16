@@ -2,27 +2,6 @@ package ListsAndArrays.Find;
 
 public class UnimodalMax {
 
-    public static void main(String[] args) {
-
-        // Examples of unimodal arrays.
-        int[] uni = {1, 4, 6, 9, 10, 11, 23, 56, 45, 22, 5, 2};
-        System.out.println(unimodalArrayMaxElement(uni));
-        int[] uni2 = {1, 3, 2};
-        System.out.println(unimodalArrayMaxElement(uni2));
-        int[] uni3 = {1};
-        System.out.println(unimodalArrayMaxElement(uni3));
-        int[] uni4 = {4,2};
-        System.out.println(unimodalArrayMaxElement(uni4));
-        int[] uni5 = {2, 5, 6 , 8, 100, 100, 100023};
-        System.out.println(unimodalArrayMaxElement(uni5));
-        int[] uni6 = {10, 9, 8, 7, 6, 5, 4, 3, 2, 1, 0};
-        System.out.println(unimodalArrayMaxElement(uni6));
-        int[] uni7 = {1, 2, 3};
-        System.out.println(unimodalArrayMaxElement(uni7));
-        int[] uni8 = {3, 2, 1};
-        System.out.println(unimodalArrayMaxElement(uni8));
-    }
-
     /** Find Max Element of Unimodal Array
      *
      * INPUT: A unimodal array of n distinct elements.
@@ -31,7 +10,7 @@ public class UnimodalMax {
      * OUTPUT: The maximum element in uni.
      * @return
      */
-    private static int unimodalArrayMaxElement(int[] uni) {
+    static int unimodalArrayMaxElement(int[] uni) {
 
         int n = uni.length;
 
