@@ -1,7 +1,7 @@
-import Test.QuickCheck (Positive(..), property)
-import Test.Hspec (Spec, hspec, describe, it)
+import Test.QuickCheck            (Positive(..), property)
+import Test.Hspec                 (Spec, hspec, describe, it)
 import Test.Hspec.Core.QuickCheck (modifyMaxSize)
-import Test.Hspec.Runner (configFastFail, defaultConfig, hspecWith)
+import Test.Hspec.Runner          (configFastFail, defaultConfig, hspecWith)
 
 import Karatsuba (karatsuba)
 

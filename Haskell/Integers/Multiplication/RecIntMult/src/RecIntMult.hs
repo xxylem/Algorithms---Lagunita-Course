@@ -1,4 +1,4 @@
-module RecIntMult where
+module RecIntMult (recIntMult) where
 
 -- Input: two n-digit positive integers x and y.
 -- Output: the product x · y.
