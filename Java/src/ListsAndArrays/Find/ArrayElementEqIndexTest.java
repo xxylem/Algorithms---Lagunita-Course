@@ -6,14 +6,13 @@ import org.junit.jupiter.api.Test;
 import static ListsAndArrays.Find.ArrayElementEqIndex.arrayElementEqIndex;
 import static org.junit.jupiter.api.Assertions.*;
 
-public class ArrayElementEqIndexTest {
+class ArrayElementEqIndexTest {
 
-    int[] empty, oneElemT, oneElemF, twoElemPosF, twoElem0T, twoElemNegT, threeElemF, threeElemT, longerF, longerT,
-            negLongerF, negLongerT;
+    private int[] oneElemT, oneElemF, twoElemPosF, twoElem0T, twoElemNegT, threeElemF, threeElemT, longerF, longerT,
+                    negLongerF, negLongerT;
 
     @BeforeEach
     void setup() {
-        empty = new int[] {};
         oneElemT = new int[] {0};
         oneElemF = new int[] {1};
         twoElemPosF = new int[] {1, 2};
