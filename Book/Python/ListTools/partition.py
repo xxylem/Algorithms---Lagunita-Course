@@ -1,14 +1,3 @@
-import random
-
-
-def choose_random_pivot(left, right):
-    """ Input: left and right endpoints left, right in {0, 1, 2, . . . , n-1}.
-        Output: an i in {left, left + 1, . . . , right}.
-        Note: Pivot is chosen uniformly at random. """
-
-    return random.randrange(left, right + 1)   # (right + 1) because the upper bound in randrange is exclusive.
-
-
 def swap_two_elements_by_indices(integers, i, j):
     """ Input: list of n distinct integers, and two indices i and j,
                 s.t. i and j are in the bounds of integers.

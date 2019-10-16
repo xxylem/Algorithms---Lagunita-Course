@@ -1,4 +1,5 @@
-from ListTools.list_tools import choose_random_pivot, partition_subsection_of_list_using_pivot_index
+from ListTools.partition import partition_subsection_of_list_using_pivot_index
+from ListTools.choose_pivot import choose_random_pivot
 
 
 def r_select(integers, i):
