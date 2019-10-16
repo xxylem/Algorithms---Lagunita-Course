@@ -1,11 +1,13 @@
 module BasicMatrixMult where
 
-import Data.Matrix as M
-import Data.Vector as V
+import           Data.Matrix (Matrix)
+import qualified Data.Matrix as M
+import           Data.Vector (Vector)
+import qualified Data.Vector as V
 
 -- Input: n x n integer matrices X and Y.
 -- Output: Z = X · Y.
-basicMatrixMult :: (Num a) => M.Matrix a -> M.Matrix a -> M.Matrix a
+basicMatrixMult :: (Num a) => Matrix a -> Matrix a -> Matrix a
 basicMatrixMult x y =
     
     -- Start at row 1 col 1 (Data.Matrix uses 1-indexing)
@@ -15,24 +17,24 @@ basicMatrixMult x y =
                 go i j z 
                     -- Reached the last entry of the last row and column
                     -- Returns the completed Z matrix
-                    | i == n && j == n = M.setElem (dot (getRow i x)
-                                                    (getCol j y))
+                    | i == n && j == n = M.setElem (dot (M.getRow i x)
+                                                    (M.getCol j y))
                                                 (i, j)
                                                 z
                     -- Reached the end of a row
                     -- Carries on from the next column
-                    | i == n = go 1 (j+1) (M.setElem (dot (getRow i x)
-                                                        (getCol j y))
+                    | i == n = go 1 (j+1) (M.setElem (dot (M.getRow i x)
+                                                        (M.getCol j y))
                                                     (i, j)
                                                     z)
                     -- Moves to the next row, same column
-                    | otherwise = go (i+1) j (M.setElem (dot (getRow i x)
-                                                            (getCol j y))
+                    | otherwise = go (i+1) j (M.setElem (dot (M.getRow i x)
+                                                            (M.getCol j y))
                                                 (i, j) 
                                                 z)
 
 -- Dot product of two vectors x and y
-dot :: (Num a) => V.Vector a -> V.Vector a -> a
+dot :: (Num a) => Vector a -> Vector a -> a
 dot x y =
     go 0 0 -- Starts from entry 0 of x and y, with dot product result init to 0
             -- (Data.Vector uses 0-indexing)
@@ -45,14 +47,14 @@ dot x y =
                                             *   y V.! i)) 
 
 -- Example matrices X and Y
-x :: M.Matrix Integer
+x :: Matrix Integer
 x = M.fromLists [ [1, 2, 3]
                 , [5, 6, 7]
                 , [7, 8, 9]]
-y :: M.Matrix Integer
+y :: Matrix Integer
 y = M.fromLists [ [2, 5, 3]
                 , [7, 6, 1]
                 , [4, 9, 0]]
 
-z :: M.Matrix Integer
+z :: Matrix Integer
 z = basicMatrixMult x y
