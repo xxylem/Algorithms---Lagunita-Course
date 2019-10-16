@@ -1,16 +1,17 @@
-module BruteForceSearchTest where
-
-import Data.List (sort)
-import Test.Hspec
-import Test.QuickCheck
-
-import qualified Data.Set as Set
+import           Data.List         (sort)
+import           Test.Hspec        (Spec, describe, it, shouldBe)
+import           Test.Hspec.Runner (configFastFail, defaultConfig, hspecWith)
+import           Test.QuickCheck   (SortedList, getSorted, property)
+import           Data.Set          (Set)
+import qualified Data.Set as S
 
 import BruteForceSearch (bruteForceSearch)
 
-
 main :: IO ()
-main = hspec $ do
+main = hspecWith defaultConfig {configFastFail = True} specs
+
+specs :: Spec
+specs = do
     describe "Testing BruteForceSearch: Counts inversions in lists." $ do
         it "an empty list has no inversions" $ do
             bruteForceSearch ([] :: [Integer]) `shouldBe` 0
@@ -52,9 +53,9 @@ propSortedListsHaveZeroInversions xs =
     bruteForceSearch (getSorted xs) == 0
 
 -- Using Set to generate the Integers guarantees there are no distinct elements.
-propReverseSortedListsHaveMaxInversions :: Set.Set Integer -> Bool
+propReverseSortedListsHaveMaxInversions :: Set Integer -> Bool
 propReverseSortedListsHaveMaxInversions intSet =
     bruteForceSearch xs == toInteger (((n - 1) * n) `div` 2)
-    where   xs = Set.toDescList intSet
+    where   xs = S.toDescList intSet
             n = length xs
 

@@ -5,7 +5,6 @@
 -- y in the list (to the "left" of y).
 ---------------------------------------------------------
 
-
 module BruteForceSearch (bruteForceSearch) where
 
 -- Input: array A of n distinct integers.
