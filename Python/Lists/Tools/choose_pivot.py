@@ -1,6 +1,6 @@
 import random
 
-import Chapter5.quick_sort
+import Lists.Sort.quick_sort.quick_sort as qs
 
 
 def choose_random_pivot(left, right, integers):
@@ -37,6 +37,6 @@ def choose_median_of_three_as_pivot(left, right, integers):
                integers[(left + right) // 2],
                integers[right]]
 
-    Chapter5.quick_sort.quick_sort(medians)
+    qs.quick_sort(medians)
 
     return median_indexes[medians[1]]

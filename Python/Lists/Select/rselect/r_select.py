@@ -1,5 +1,5 @@
-from ListTools.partition import partition_subsection_of_list_using_pivot_index
-from ListTools.choose_pivot import choose_random_pivot
+from Lists.Tools.partition import partition_subsection_of_list_using_pivot_index
+import Lists.Tools.choose_pivot as piv
 
 
 def r_select(integers, i):
@@ -23,7 +23,7 @@ def r_select(integers, i):
         if left >= right:
             return integers[left]
 
-        pivot_index = choose_random_pivot(left, right)
+        pivot_index = piv.choose_random_pivot(left, right, integers)
 
         # Update the pivot index after partitioning the sublist around the pivot element.
         pivot_index = partition_subsection_of_list_using_pivot_index(integers, left, right, pivot_index)

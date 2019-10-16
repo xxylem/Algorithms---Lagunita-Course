@@ -1,7 +1,7 @@
 import unittest
 import random
 
-from Chapter6.r_select import r_select
+from Lists.Select.rselect.r_select import r_select
 
 
 class RSelectTest(unittest.TestCase):

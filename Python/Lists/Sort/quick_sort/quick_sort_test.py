@@ -1,6 +1,6 @@
 import random
 import unittest
-import Chapter5.quick_sort as qs
+import Lists.Sort.quick_sort.quick_sort as qs
 
 
 class SwapTest(unittest.TestCase):

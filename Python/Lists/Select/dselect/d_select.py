@@ -1,4 +1,4 @@
-from ListTools.partition import partition_subsection_of_list_using_pivot_index, swap_two_elements_by_indices
+from Lists.Tools.partition import partition_subsection_of_list_using_pivot_index
 
 
 def get_list_of_medians(integers, left, right):

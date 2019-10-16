@@ -1,11 +1,11 @@
-from ListTools.partition import swap_two_elements_by_indices, partition_subsection_of_list_with_pivot_at_left
-from ListTools.choose_pivot import choose_random_pivot
+from Lists.Tools.partition import swap_two_elements_by_indices, partition_subsection_of_list_with_pivot_at_left
+import Lists.Tools.choose_pivot as piv
 
 
 def quick_sort(integers):
     """ Input: list of n distinct integers
         Side-effect: elements of the list are sorted from smallest to largest."""
-    quick_sort_with_pivot_function(integers, choose_random_pivot)
+    quick_sort_with_pivot_function(integers, piv.choose_random_pivot)
 
 
 def quick_sort_with_pivot_function(integers, pivot_function):

@@ -1,5 +1,5 @@
-from Chapter5.quick_sort import quick_sort_with_pivot_function
-from ListTools.choose_pivot import choose_first_element_as_pivot, choose_final_element_as_pivot, \
+from Lists.Sort.quick_sort.quick_sort import quick_sort_with_pivot_function
+from Lists.Tools.choose_pivot import choose_first_element_as_pivot, choose_final_element_as_pivot, \
                                         choose_median_of_three_as_pivot
 
 

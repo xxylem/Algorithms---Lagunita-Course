@@ -1,5 +1,5 @@
 import unittest
-import Chapter1.rec_int_mult as rim
+import Integers.Multiplication.recursive_integer_multiplication.rec_int_mult as rim
 
 
 class MyTestCase(unittest.TestCase):
