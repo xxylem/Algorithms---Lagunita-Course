@@ -1,14 +1,15 @@
-module UnimodalMaxChallengeProblemTest where
-
 import qualified Data.Array as A
-import Test.Hspec
+import Test.Hspec (Spec, describe, it, shouldBe, shouldThrow, anyException)
+import Test.Hspec.Runner (configFastFail, defaultConfig, hspecWith)
 import Control.Exception (evaluate)
 
-import UnimodalMaxChallengeProblem (unimodalMax)
-
+import UnimodalMax (unimodalMax)
 
 main :: IO ()
-main = hspec $ do
+main = hspecWith defaultConfig {configFastFail = True} specs
+
+specs :: Spec
+specs = do
     describe "Test suite for finding the max element in a unimodal array." $ do
         it "throws exception if used with empty array" $ do
             evaluate (unimodalMax ua0Elem) `shouldThrow` anyException

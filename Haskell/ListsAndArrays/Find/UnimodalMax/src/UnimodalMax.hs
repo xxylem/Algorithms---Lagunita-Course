@@ -1,4 +1,4 @@
-module UnimodalMaxChallengeProblem where
+module UnimodalMax (unimodalMax) where
 
 import Data.Array
 
