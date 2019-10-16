@@ -1,9 +1,9 @@
-import Test.QuickCheck (Positive, getPositive, property)
-import Test.Hspec (Spec, hspec, describe, it)
+import Test.QuickCheck            (Positive, getPositive, property)
+import Test.Hspec                 (Spec, hspec, describe, it)
 import Test.Hspec.Core.QuickCheck (modifyMaxSuccess)
-import Test.Hspec.Runner (configFastFail, defaultConfig, hspecWith)
+import Test.Hspec.Runner          (configFastFail, defaultConfig, hspecWith)
 
-import FastPower (fastPower)
+import FastPower                  (fastPower)
 
 
 main :: IO ()

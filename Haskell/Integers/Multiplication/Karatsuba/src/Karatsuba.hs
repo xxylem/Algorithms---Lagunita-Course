@@ -1,4 +1,4 @@
-module Karatsuba where
+module Karatsuba (karatsuba) where
 
 -- Input: two n-digit positive integers x and y.
 -- Output: the product x · y.

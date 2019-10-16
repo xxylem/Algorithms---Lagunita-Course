@@ -1,9 +1,7 @@
-module KaratsubaTest where
-
-import Test.QuickCheck
-import Test.Hspec
+import Test.QuickCheck (Positive(..), property)
+import Test.Hspec (Spec, hspec, describe, it)
 import Test.Hspec.Core.QuickCheck (modifyMaxSize)
-import Control.Monad (guard)
+import Test.Hspec.Runner (configFastFail, defaultConfig, hspecWith)
 
 import Karatsuba (karatsuba)
 
@@ -11,9 +9,11 @@ import Karatsuba (karatsuba)
 -- length is a power of two are generated for the tests.
 --    OR: upgrade Karatsuba function to operate on all integers.
 
-
 main :: IO ()
-main = hspec $ do
+main = hspecWith defaultConfig {configFastFail = True} specs
+
+specs :: Spec
+specs = do
     describe "Identity property for multiplication." $
         do modifyMaxSize (const 1000) $ it "propIdentity" $ property propIdentity
     describe "Commutativity property for multiplication." $
@@ -25,30 +25,40 @@ main = hspec $ do
     describe "karatsuba provides same result at primitive multiplication." $
         do modifyMaxSize (const 1000) $ it "propGeneralMultiplication" $ property propGeneralMultiplication
     
-propIdentity :: Integer -> Bool
-propIdentity x =
+propIdentity :: Positive Integer -> Bool
+propIdentity (Positive x) =
         karatsuba x 1
     ==  x
     &&  karatsuba 1 x
     ==  x
 
-propCommutativity :: Integer -> Integer -> Bool
-propCommutativity x y = 
+propCommutativity :: Positive Integer 
+                  -> Positive Integer 
+                  -> Bool
+propCommutativity (Positive x) (Positive y) = 
         karatsuba x y 
     ==  karatsuba y x
 
-propAssociativity :: Integer -> Integer -> Integer -> Bool
-propAssociativity x y z =
+propAssociativity :: Positive Integer 
+                  -> Positive Integer 
+                  -> Positive Integer 
+                  -> Bool
+propAssociativity (Positive x) (Positive y) (Positive z) =
         karatsuba x (karatsuba y z) 
     ==  karatsuba (karatsuba x y) z
 
 
-propDistributivity :: Integer -> Integer -> Integer -> Bool
-propDistributivity x y z =
+propDistributivity :: Positive Integer 
+                   -> Positive Integer 
+                   -> Positive Integer 
+                   -> Bool
+propDistributivity (Positive x) (Positive y) (Positive z) =
         karatsuba x (y + z)
     ==  karatsuba x y + karatsuba x z
 
-propGeneralMultiplication :: Integer -> Integer -> Bool
-propGeneralMultiplication x y =
+propGeneralMultiplication :: Positive Integer 
+                          -> Positive Integer 
+                          -> Bool
+propGeneralMultiplication (Positive x) (Positive y) =
         karatsuba x y
     ==  x * y
