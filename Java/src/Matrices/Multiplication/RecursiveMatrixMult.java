@@ -2,32 +2,13 @@ package Matrices.Multiplication;
 
 import java.util.Arrays;
 
-public class RecursiveMatrixMult {
-
-    public static void main(String[] args) {
-
-        // Two example nxn matrices with n = 2 ^ m for some m
-        int[][] X = {{1, 2, 3, 4}
-                    , {4, 5, 6, 2}
-                    , {7, 8, 9, 7}
-                    , {2, 1, 1, 0}};
-
-        int[][] Y = {{2, 3, 4, 3}
-                    , {2, 1, 0, 9}
-                    , {8, 4, 2, 3}
-                    , {2, 4, 1, 6}};
-
-        int[][] Z = recMatMult(X, Y);
-
-        System.out.println(Arrays.deepToString(Z));
-
-    }
+class RecursiveMatrixMult {
 
     //  Matrices.Multiplication.RecMatMult
     //  Input: n x n integer matrices X and Y.
     //  Output: Z = X · Y.
     //  Assumption: n is a power of 2.
-    private static int[][] recMatMult(int[][] X, int[][] Y) {
+    static int[][] recMatMult(int[][] X, int[][] Y) {
 
         // Assume both matrices are n x n.
         int n = X.length;
