@@ -1,13 +1,14 @@
-module ClosestPairTest where
-
-import Test.Hspec
+import Test.Hspec (Spec, describe, it, anyException, shouldThrow, shouldMatchList)
+import Test.Hspec.Runner (configFastFail, defaultConfig, hspecWith)
 import Control.Exception (evaluate)
 
 import qualified ClosestPair as C
 
-
 main :: IO ()
-main = hspec $ do
+main = hspecWith defaultConfig {configFastFail = True} specs
+
+specs :: Spec
+specs = do
     describe "Tests that closestPair finds the closest pair of points" $ do
 
         it "Less than two points should throw exception" $ do
@@ -22,10 +23,6 @@ main = hspec $ do
     where pToL (a, b) = [a, b]
 
 
-
-
-
-
 -- Example points
 pt1, pt2, pt3, pt4, pt5, pt6, pt7, pt8, pt9 :: C.Point
 pt1 = C.Point 2 17
@@ -37,8 +34,6 @@ pt6 = C.Point 9 12
 pt7 = C.Point 16 17
 pt8 = C.Point 1000 99
 pt9 = C.Point 17 16
-
-
 
 -- Lists of example points
 twoPoints, twoPointsX, twoPointsY :: [C.Point]

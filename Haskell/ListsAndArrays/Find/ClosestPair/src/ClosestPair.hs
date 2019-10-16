@@ -1,6 +1,6 @@
 module ClosestPair (sortByY, sortByX, Point(..), closestPair) where
 
-import Data.Sort as S
+import Data.Sort (sortBy)
 
 -- A point in  the two dimensional XY plane.
 data Point =
@@ -118,9 +118,9 @@ dist (p1, p2) = (x p1 - x p2) ^ (2 :: Int) + (y p1 - y p2) ^ (2 :: Int)
 
 -- Sorts the list of points by their X-coordinates, least first.
 sortByX :: [Point] -> [Point]
-sortByX = S.sortBy (\p1 p2 -> compare (x p1) (x p2))
+sortByX = sortBy (\p1 p2 -> compare (x p1) (x p2))
 
 -- Sorts the list of points by their Y-coordinates, least first.
 sortByY :: [Point] -> [Point]
-sortByY = S.sortBy (\p1 p2 -> compare (y p1) (y p2))
+sortByY = sortBy (\p1 p2 -> compare (y p1) (y p2))
 
