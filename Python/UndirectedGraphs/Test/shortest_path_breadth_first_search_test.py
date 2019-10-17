@@ -1,8 +1,8 @@
 import math
 import unittest
 
-from Graphs.Model.graph import Graph
-from Graphs.shortest_path_breadth_first_search import shortest_path_breadth_first_search
+from UndirectedGraphs.Model.graph import Graph
+from UndirectedGraphs.shortest_path_breadth_first_search import shortest_path_breadth_first_search
 
 
 class ShortestPathBFSTest(unittest.TestCase):

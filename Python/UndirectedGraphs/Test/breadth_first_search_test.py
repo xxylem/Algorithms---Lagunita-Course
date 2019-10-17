@@ -1,7 +1,7 @@
 import unittest
 
-from Graphs.Model.graph import Graph
-from Graphs.breadth_first_search import breadth_first_search
+from UndirectedGraphs.Model.graph import Graph
+from UndirectedGraphs.breadth_first_search import breadth_first_search
 
 
 class BreadthFirstSearchTest(unittest.TestCase):

@@ -1,7 +1,7 @@
 import unittest
 
-from Graphs.Model.graph import Graph
-from Graphs.undirected_connected_components import undirected_connected_components
+from UndirectedGraphs.Model.graph import Graph
+from UndirectedGraphs.undirected_connected_components import undirected_connected_components
 
 
 class UndirectedConnectedComponentsTest(unittest.TestCase):
