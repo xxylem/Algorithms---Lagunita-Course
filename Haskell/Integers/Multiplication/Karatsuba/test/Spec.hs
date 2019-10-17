@@ -5,10 +5,6 @@ import Test.Hspec.Runner          (configFastFail, defaultConfig, hspecWith)
 
 import Karatsuba (karatsuba)
 
--- TODO modify tests s.t. only numbers of the same length and whose
--- length is a power of two are generated for the tests.
---    OR: upgrade Karatsuba function to operate on all integers.
-
 main :: IO ()
 main = hspecWith defaultConfig {configFastFail = True} specs
 
