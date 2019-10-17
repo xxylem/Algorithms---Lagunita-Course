@@ -2,6 +2,8 @@ from queue import SimpleQueue
 
 
 def undirected_connected_components(graph):
+    """ Input: undirected graph G = (V, E) in adjacency-list representation, with V = {1, 2, 3, . . . , n}.
+        Postcondition: for every u, v 2 V , cc(u) = cc(v) if and only if u, v are in the same connected component"""
 
     # Mark all nodes as unexplored
     explored = {}
