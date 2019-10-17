@@ -25,12 +25,15 @@ dependencies:
 library:
   exposed-modules: BruteForceSearch
   source-dirs: src
+  ghc-options:
+  - -Wall
 
 tests:
   BruteForceSearch-test:
     main:                Spec.hs
     source-dirs:         test
     ghc-options:
+    - -Wall
     - -threaded
     - -rtsopts
     - -with-rtsopts=-N

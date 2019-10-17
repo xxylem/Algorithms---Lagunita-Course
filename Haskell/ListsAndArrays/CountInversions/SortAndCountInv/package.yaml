@@ -25,12 +25,15 @@ dependencies:
 library:
   exposed-modules: SortAndCountInv
   source-dirs: src
+  ghc-options:
+  - -Wall
 
 tests:
   SortAndCountInv-test:
     main:                Spec.hs
     source-dirs:         test
     ghc-options:
+    - -Wall
     - -threaded
     - -rtsopts
     - -with-rtsopts=-N
