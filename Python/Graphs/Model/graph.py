@@ -1,4 +1,7 @@
 def _edge_exists_between(v1, v2):
+    """ Checks for an edge between the two given vertices.
+        ASSUMES: v1 and v2 are distinct vertices.
+                 v1 and v2 are in the same graph. """
     for e in v1.get_incident_edges():
         if e.get_vertex1() is v2 or e.get_vertex2() is v2:
             return True
@@ -20,8 +23,10 @@ class Graph:
     def get_edges(self): return self.edges
     def get_vertices(self): return self.vertices
 
-    """ Add an edge or vertex to this graph."""
     def add_vertex(self):
+        """ Add an edge or vertex to this graph."""
+        # TODO Do I want to add a label to the vertex? It may be easier to keep track of them in larger graphs.
+        #      I could add nice printing with the label.
         v = Graph.Vertex()
         self.vertices.add(v)
         return v
