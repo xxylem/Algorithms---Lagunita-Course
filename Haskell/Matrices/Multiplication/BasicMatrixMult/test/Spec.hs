@@ -1,9 +1,8 @@
 import           Data.Matrix                (Matrix)
 import qualified Data.Matrix as M
 import           Test.Hspec                 (Spec, it, describe)
-import           Test.Hspec.Core.QuickCheck (modifyMaxSuccess, modifyMaxSize)
 import           Test.Hspec.Runner          (configFastFail, defaultConfig, hspecWith)
-import           Test.QuickCheck            (Arbitrary, Gen, Property, arbitrary, choose, forAll, sized, vector, vectorOf)
+import           Test.QuickCheck            (Arbitrary, Gen, Property, choose, forAll, sized, vector, vectorOf)
 
 import           BasicMatrixMult            (basicMatrixMult)
 
@@ -12,32 +11,23 @@ main = hspecWith defaultConfig {configFastFail = True} specs
 
 specs :: Spec
 specs = describe "Basic Matrix Multiplication Test" $ do
+
     it "test identity property" $ prop_identity
-    -- describe "Test properties of matrix multiplication using BasicMatrixMult." $ do
-    --     modifyMaxSize (const 10) $ it "test identity property" $
-    --                                             property propIdentity  
-    -- describe "Commutativity property for multiplication." $
-    --     do modifyMaxSuccess (const 1000) $ it "propAssociativity" $ property propAssociativity
-    -- describe "Distributivity property for multiplication." $
-    --     do modifyMaxSuccess (const 1000) $ it "propDistributivity" $ property propDistributivity
-    -- describe "BasicMatrixMult provides same result at primitive multiplication." $
-        -- do modifyMaxSuccess (const 1) $ it "propGeneralMultiplication" $ 
-        --     property propGeneralMultiplication
-    
--- propIdentity :: Matrix Integer -> Bool
--- propIdentity x =
---         basicMatrixMult x i ==  x
---     &&  basicMatrixMult i x ==  x
---     where i = M.identity (M.ncols x)
+
+    it "test correct multiplication of square matrices" $ prop_correctly_multiplies_arbitrary_square_matrices
+
+    it "test associativity property" $ prop_associativity
+
+    it "test distributivity property" $ prop_distributivity
 
 
--- instance (Arbitrary a) => (Arbitrary (Matrix a)) where
 squareMatrix :: (Arbitrary a) => Gen (Matrix a)
 squareMatrix =
     sized $
         \n -> do
-            n' <- choose (2, n)
-            rows <- vectorOf n' (vector n')
+            let n' = max 1 n
+            n'' <- choose (1, n')
+            rows <- vectorOf n'' (vector n'')
             return $ M.fromLists rows
 
 prop_identity :: Property
@@ -46,31 +36,39 @@ prop_identity = forAll squareMatrix $
                 basicMatrixMult m i ==  (m :: Matrix Int)
             &&  basicMatrixMult i m ==  m
             
+twoSquareMatricesSameSize :: (Arbitrary a) => Gen (Matrix a, Matrix a)
+twoSquareMatricesSameSize =
+    sized $
+        \n -> do
+            let n' = max 1 n
+            n'' <- choose (1, n')
+            rows1 <- vectorOf n'' (vector n'')
+            rows2 <- vectorOf n'' (vector n'')
+            return (M.fromLists rows1, M.fromLists rows2)
 
-            
+prop_correctly_multiplies_arbitrary_square_matrices :: Property
+prop_correctly_multiplies_arbitrary_square_matrices =
+    forAll twoSquareMatricesSameSize $
+    \(x, y) -> basicMatrixMult x y == M.multStd x (y :: Matrix Int)
+          
+threeSquareMatricesSameSize :: (Arbitrary a) => Gen (Matrix a, Matrix a, Matrix a)
+threeSquareMatricesSameSize =
+    sized $
+        \n -> do
+            let n' = max 1 n
+            n'' <- choose (1, n')
+            rows1 <- vectorOf n'' (vector n'')
+            rows2 <- vectorOf n'' (vector n'')
+            rows3 <- vectorOf n'' (vector n'')
+            return (M.fromLists rows1, M.fromLists rows2, M.fromLists rows3)
 
 
--- TODO implement test suite
+prop_associativity :: Property
+prop_associativity =
+    forAll threeSquareMatricesSameSize $
+    \(x, y, z) -> basicMatrixMult x (basicMatrixMult y z) == basicMatrixMult (basicMatrixMult x y) (z :: Matrix Int)
 
--- propAssociativity :: M.Matrix Integer 
---                     -> M.Matrix Integer 
---                     -> M.Matrix Integer 
---                     -> Bool
--- propAssociativity x y z =
---         basicMatrixMult x (basicMatrixMult y z) 
---     ==  basicMatrixMult (basicMatrixMult x y) z
-
-
--- propDistributivity :: M.Matrix Integer 
---                     -> M.Matrix Integer 
---                     -> M.Matrix Integer 
---                     -> Bool
--- propDistributivity x y z =
---         basicMatrixMult x (y + z)
---     ==  basicMatrixMult x y + basicMatrixMult x z
-
--- propGeneralMultiplication :: MatrixPair
---                             -> Bool
--- propGeneralMultiplication (MatrixPair x y) =
---         basicMatrixMult x y
---     ==  M.multStd x y
+prop_distributivity :: Property
+prop_distributivity =
+    forAll threeSquareMatricesSameSize $
+    \(x, y, z) -> basicMatrixMult x (y + z) == basicMatrixMult x y + basicMatrixMult x (z :: Matrix Int)
