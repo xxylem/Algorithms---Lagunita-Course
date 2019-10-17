@@ -26,6 +26,8 @@ class Graph:
             raise ValueError("The vertices must be distinct.")
 
         e = Graph.Edge(v1, v2)
+        v1.get_incident_edges().add(e)
+        v2.get_incident_edges().add(e)
         self.edges.add(e)
         return e
 
@@ -38,7 +40,7 @@ class Graph:
             self.edges = set(edges)
 
         # Getter
-        def get_edges(self): return self.edges
+        def get_incident_edges(self): return self.edges
 
     class Edge:
         """ An edge, e, consists of the two vertices, vertex1 and vertex2, that are incident to the edge."""
