@@ -1,3 +1,10 @@
+def _edge_exists_between(v1, v2):
+    for e in v1.get_incident_edges():
+        if e.get_vertex1() is v2 or e.get_vertex2() is v2:
+            return True
+    return False
+
+
 class Graph:
     """ A simple representation of a graph G = (V, E) with the set of vertices V and set of edges E. """
 
@@ -24,6 +31,8 @@ class Graph:
             raise ValueError("The vertices must already be in the graph.")
         if v1 == v2:
             raise ValueError("The vertices must be distinct.")
+        if _edge_exists_between(v1, v2):
+            raise ValueError("There is already an edge between those two vertices.")
 
         e = Graph.Edge(v1, v2)
         v1.get_incident_edges().add(e)
@@ -54,3 +63,4 @@ class Graph:
 
         def get_vertex2(self):
             return self.vertex2
+
