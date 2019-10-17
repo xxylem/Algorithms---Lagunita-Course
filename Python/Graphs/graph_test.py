@@ -25,6 +25,20 @@ class EdgeTest(unittest.TestCase):
         with self.assertRaises(ValueError):
             Edge(n, n)
 
+    def test_new_edge_adds_itself_to_incident_vertices(self):
+        n1 = Vertex()
+        n2 = Vertex()
+        self.assertEqual(len(n1.get_edges()), 0)
+        self.assertEqual(len(n2.get_edges()), 0)
+
+        e = Edge(n1, n2)
+
+        self.assertEqual(e.get_vertex1(), n1)
+        self.assertEqual(e.get_vertex2(), n2)
+
+        self.assertEqual(n1.get_edges(), {e})
+        self.assertEqual(n2.get_edges(), {e})
+
 
 if __name__ == '__main__':
     unittest.main()
