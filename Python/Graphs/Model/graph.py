@@ -14,45 +14,41 @@ class Graph:
     def get_vertices(self): return self.vertices
 
     """ Add an edge or vertex to this graph."""
-    # TODO recursively add all vertices and edges that are connected to the added component:
-    #       This can be done once the graph algorithms are written, presumably.
-    def add(self, obj):
-        if isinstance(obj, Vertex):
-            self.vertices.add(obj)
-        if isinstance(obj, Edge):
-            self.edges.add(obj)
+    def add_vertex(self):
+        v = Graph.Vertex()
+        self.vertices.add(v)
+        return v
 
+    def add_edge(self, v1, v2):
+        if v1 not in self.vertices or v2 not in self.vertices:
+            raise ValueError("The vertices must already be in the graph.")
+        if v1 == v2:
+            raise ValueError("The vertices must be distinct.")
 
-class Vertex:
-    """ A vertex, v, has a set of edges s.t. forall e in edges, e is incident to v. """
+        e = Graph.Edge(v1, v2)
+        self.edges.add(e)
+        return e
 
-    def __init__(self, edges=None):
-        if edges is None:
-            edges = []
-        self.edges = set(edges)
+    class Vertex:
+        """ A vertex, v, has a set of incident edges. """
 
-    def get_edges(self):
-        return self.edges
+        def __init__(self, edges=None):
+            if edges is None:
+                edges = []
+            self.edges = set(edges)
 
-    def add(self, edge):
-        self.edges.add(edge)
+        # Getter
+        def get_edges(self): return self.edges
 
+    class Edge:
+        """ An edge, e, consists of the two vertices, vertex1 and vertex2, that are incident to the edge."""
 
-class Edge:
-    """ An edge, e, consists of the two vertices, vertex1 and vertex2, that are incident to the edge."""
+        def __init__(self, vertex1, vertex2):
+            self.vertex1 = vertex1
+            self.vertex2 = vertex2
 
-    def __init__(self, vertex1, vertex2):
-        if vertex1 == vertex2:
-            raise ValueError
+        def get_vertex1(self):
+            return self.vertex1
 
-        self.vertex1 = vertex1
-        self.vertex2 = vertex2
-
-        vertex1.add(self)
-        vertex2.add(self)
-
-    def get_vertex1(self):
-        return self.vertex1
-
-    def get_vertex2(self):
-        return self.vertex2
+        def get_vertex2(self):
+            return self.vertex2
