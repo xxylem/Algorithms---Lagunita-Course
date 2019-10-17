@@ -116,3 +116,7 @@ class BreadthFirstSearchTest(unittest.TestCase):
         self.assertEqual(expected_all_but_f, explored_h)
 
         self.assertEqual(expected_f, explored_f)
+
+
+if __name__ == '__main__':
+    unittest.main()

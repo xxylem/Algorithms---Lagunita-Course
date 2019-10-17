@@ -126,8 +126,5 @@ class GraphTest(unittest.TestCase):
         self.assertEqual(v2.get_incident_edges(), {e})
 
 
-
-
-
 if __name__ == '__main__':
     unittest.main()

@@ -176,3 +176,7 @@ class ShortestPathBFSTest(unittest.TestCase):
         self.assertEqual(expected_g, distances_g)
         self.assertEqual(expected_f, distances_f)
         self.assertEqual(expected_h, distances_h)
+
+
+if __name__ == '__main__':
+    unittest.main()
