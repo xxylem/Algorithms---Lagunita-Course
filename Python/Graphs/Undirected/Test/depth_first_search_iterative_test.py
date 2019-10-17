@@ -1,16 +1,16 @@
 import unittest
 
-from UndirectedGraphs.Model.graph import Graph
-from UndirectedGraphs.depth_first_search_recursive import depth_first_search_recursive
+from Graphs.Undirected.Model.graph import Graph
+from Graphs.Undirected.depth_first_search_iterative import depth_first_search_iterative
 
 
-class DFSRecursiveTest(unittest.TestCase):
+class DFSIterativeTest(unittest.TestCase):
 
     def test_one_node_graph(self):
         g = Graph()
         v = g.add_vertex()
 
-        explored = depth_first_search_recursive(g, v)
+        explored = depth_first_search_iterative(g, v)
         expected = {
             v: True
         }
@@ -22,13 +22,13 @@ class DFSRecursiveTest(unittest.TestCase):
         v1 = g.add_vertex()
         v2 = g.add_vertex()
 
-        explored1 = depth_first_search_recursive(g, v1)
+        explored1 = depth_first_search_iterative(g, v1)
         expected1 = {
             v1: True,
             v2: False
         }
 
-        explored2 = depth_first_search_recursive(g, v2)
+        explored2 = depth_first_search_iterative(g, v2)
         expected2 = {
             v1: False,
             v2: True
@@ -43,13 +43,13 @@ class DFSRecursiveTest(unittest.TestCase):
         v2 = g.add_vertex()
         g.add_edge(v1, v2)
 
-        explored1 = depth_first_search_recursive(g, v1)
+        explored1 = depth_first_search_iterative(g, v1)
         expected1 = {
             v1: True,
             v2: True
         }
 
-        explored2 = depth_first_search_recursive(g, v2)
+        explored2 = depth_first_search_iterative(g, v2)
         expected2 = {
             v1: True,
             v2: True
@@ -77,13 +77,13 @@ class DFSRecursiveTest(unittest.TestCase):
         e5 = grf.add_edge(c, h)
         e6 = grf.add_edge(d, e)
 
-        explored_a = depth_first_search_recursive(grf, a)
-        explored_b = depth_first_search_recursive(grf, b)
-        explored_c = depth_first_search_recursive(grf, c)
-        explored_d = depth_first_search_recursive(grf, d)
-        explored_e = depth_first_search_recursive(grf, e)
-        explored_g = depth_first_search_recursive(grf, g)
-        explored_h = depth_first_search_recursive(grf, h)
+        explored_a = depth_first_search_iterative(grf, a)
+        explored_b = depth_first_search_iterative(grf, b)
+        explored_c = depth_first_search_iterative(grf, c)
+        explored_d = depth_first_search_iterative(grf, d)
+        explored_e = depth_first_search_iterative(grf, e)
+        explored_g = depth_first_search_iterative(grf, g)
+        explored_h = depth_first_search_iterative(grf, h)
         expected_all_but_f = {
             a: True,
             b: True,
@@ -95,7 +95,7 @@ class DFSRecursiveTest(unittest.TestCase):
             h: True
         }
 
-        explored_f = depth_first_search_recursive(grf, f)
+        explored_f = depth_first_search_iterative(grf, f)
         expected_f = {
             a: False,
             b: False,

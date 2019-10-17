@@ -1,16 +1,16 @@
 import unittest
 
-from UndirectedGraphs.Model.graph import Graph
-from UndirectedGraphs.depth_first_search_iterative import depth_first_search_iterative
+from Graphs.Undirected.Model.graph import Graph
+from Graphs.Undirected.breadth_first_search import breadth_first_search
 
 
-class DFSIterativeTest(unittest.TestCase):
+class BreadthFirstSearchTest(unittest.TestCase):
 
     def test_one_node_graph(self):
         g = Graph()
         v = g.add_vertex()
 
-        explored = depth_first_search_iterative(g, v)
+        explored = breadth_first_search(g, v)
         expected = {
             v: True
         }
@@ -22,13 +22,13 @@ class DFSIterativeTest(unittest.TestCase):
         v1 = g.add_vertex()
         v2 = g.add_vertex()
 
-        explored1 = depth_first_search_iterative(g, v1)
+        explored1 = breadth_first_search(g, v1)
         expected1 = {
             v1: True,
             v2: False
         }
 
-        explored2 = depth_first_search_iterative(g, v2)
+        explored2 = breadth_first_search(g, v2)
         expected2 = {
             v1: False,
             v2: True
@@ -43,13 +43,13 @@ class DFSIterativeTest(unittest.TestCase):
         v2 = g.add_vertex()
         g.add_edge(v1, v2)
 
-        explored1 = depth_first_search_iterative(g, v1)
+        explored1 = breadth_first_search(g, v1)
         expected1 = {
             v1: True,
             v2: True
         }
 
-        explored2 = depth_first_search_iterative(g, v2)
+        explored2 = breadth_first_search(g, v2)
         expected2 = {
             v1: True,
             v2: True
@@ -77,13 +77,13 @@ class DFSIterativeTest(unittest.TestCase):
         e5 = grf.add_edge(c, h)
         e6 = grf.add_edge(d, e)
 
-        explored_a = depth_first_search_iterative(grf, a)
-        explored_b = depth_first_search_iterative(grf, b)
-        explored_c = depth_first_search_iterative(grf, c)
-        explored_d = depth_first_search_iterative(grf, d)
-        explored_e = depth_first_search_iterative(grf, e)
-        explored_g = depth_first_search_iterative(grf, g)
-        explored_h = depth_first_search_iterative(grf, h)
+        explored_a = breadth_first_search(grf, a)
+        explored_b = breadth_first_search(grf, b)
+        explored_c = breadth_first_search(grf, c)
+        explored_d = breadth_first_search(grf, d)
+        explored_e = breadth_first_search(grf, e)
+        explored_g = breadth_first_search(grf, g)
+        explored_h = breadth_first_search(grf, h)
         expected_all_but_f = {
             a: True,
             b: True,
@@ -95,7 +95,7 @@ class DFSIterativeTest(unittest.TestCase):
             h: True
         }
 
-        explored_f = depth_first_search_iterative(grf, f)
+        explored_f = breadth_first_search(grf, f)
         expected_f = {
             a: False,
             b: False,
