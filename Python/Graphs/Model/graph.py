@@ -9,12 +9,13 @@ class Graph:
         self.edges = set(edges)
         self.vertices = set(vertices)
 
-    def get_edges(self):
-        return self.edges
+    # Getters
+    def get_edges(self): return self.edges
+    def get_vertices(self): return self.vertices
 
-    def get_vertices(self):
-        return self.vertices
-
+    """ Add an edge or vertex to this graph."""
+    # TODO recursively add all vertices and edges that are connected to the added component:
+    #       This can be done once the graph algorithms are written, presumably.
     def add(self, obj):
         if isinstance(obj, Vertex):
             self.vertices.add(obj)
