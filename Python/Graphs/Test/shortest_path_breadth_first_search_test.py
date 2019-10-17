@@ -5,7 +5,7 @@ from Graphs.Model.graph import Graph
 from Graphs.shortest_path_breadth_first_search import shortest_path_breadth_first_search
 
 
-class BreadFirstSearchTest(unittest.TestCase):
+class ShortestPathBFSTest(unittest.TestCase):
 
     def test_one_node_graph(self):
         g = Graph()

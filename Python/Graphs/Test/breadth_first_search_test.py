@@ -4,7 +4,7 @@ from Graphs.Model.graph import Graph
 from Graphs.breadth_first_search import breadth_first_search
 
 
-class BreadFirstSearchTest(unittest.TestCase):
+class BreadthFirstSearchTest(unittest.TestCase):
 
     def test_one_node_graph(self):
         g = Graph()
