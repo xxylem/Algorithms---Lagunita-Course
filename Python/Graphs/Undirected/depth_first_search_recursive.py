@@ -25,13 +25,3 @@ def depth_first_search_recursive(graph, search_vertex):
     helper(search_vertex)
     return explored
 
-#    // all vertices unexplored before outer call
-# mark s as explored
-# for each edge (s, v) in s’s adjacency list do
-# if v is unexplored then
-# DFS (G, v)
-
-
-    pass
-
-
