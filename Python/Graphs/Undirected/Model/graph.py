@@ -11,13 +11,18 @@ def _edge_exists_between(v1, v2):
 class Graph:
     """ A simple representation of a graph G = (V, E) with the set of vertices V and set of edges E. """
 
-    def __init__(self, edges=None, vertices=None):
+    def __init__(self, edges=None, vertices=None, name=None):
         if vertices is None:
             vertices = []
         if edges is None:
             edges = []
+        if name is None:
+            name = str(id(self))
+
         self.edges = set(edges)
         self.vertices = set(vertices)
+        self.name = name
+
 
     # Getters
     def get_edges(self): return self.edges
@@ -48,10 +53,14 @@ class Graph:
     class Vertex:
         """ A vertex, v, has a set of incident edges. """
 
-        def __init__(self, edges=None):
+        def __init__(self, edges=None, name=None):
             if edges is None:
                 edges = []
+            if name is None:
+                name = str(id(self))
+
             self.edges = set(edges)
+            self.name = name
 
         # Getter
         def get_incident_edges(self): return self.edges
@@ -59,9 +68,13 @@ class Graph:
     class Edge:
         """ An edge, e, consists of the two vertices, vertex1 and vertex2, that are incident to the edge."""
 
-        def __init__(self, vertex1, vertex2):
+        def __init__(self, vertex1, vertex2, name=None):
+            if name is None:
+                name = str(id(self))
+
             self.vertex1 = vertex1
             self.vertex2 = vertex2
+            self.name = name
 
         def get_vertex1(self):
             return self.vertex1

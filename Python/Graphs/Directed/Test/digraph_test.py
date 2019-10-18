@@ -176,6 +176,19 @@ class DirectedGraphTest(unittest.TestCase):
 
         self.assertEqual(g.get_edges(), {e1, e2})
 
+    def test_reverse_doesnt_mutate_original_graph(self):
+        orig_g = DirectedGraph()
+        a = orig_g.add_vertex()
+        b = orig_g.add_vertex()
+        e = orig_g.add_edge(a, b)
+        orig_g.reverse()
+        self.assertEqual(orig_g.get_vertices(), {a, b})
+        self.assertEqual(orig_g.get_edges(), {e})
+        self.assertEqual(a.get_incident_edges(), {e})
+        self.assertEqual(b.get_incident_edges(), set())
+
+    def test_reverse_edge_in_two_vertex_graph(self):
+        pass
 
 if __name__ == '__main__':
     unittest.main()

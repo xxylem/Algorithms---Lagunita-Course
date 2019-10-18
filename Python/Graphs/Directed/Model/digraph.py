@@ -27,20 +27,13 @@ class DirectedGraph(Graph):
         self.edges.add(e)
         return e
 
+    def reverse(self):
+        pass
+
     class DirectedEdge(Graph.Edge):
 
-        def __init__(self, from_v, to_v):
-            self.from_v = from_v
-            self.to_v = to_v
-
         def get_from(self):
-            return self.from_v
-
-        def get_vertex1(self):
-            return self.get_from()
+            return self.get_vertex1()
 
         def get_to(self):
-            return self.to_v
-
-        def get_vertex2(self):
-            return self.get_to()
+            return self.get_vertex2()
