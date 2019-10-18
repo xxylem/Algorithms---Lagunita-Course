@@ -6,10 +6,12 @@ def depth_first_search_iterative(graph, search_vertex):
                              False if v is not reachable from search_vertex (v and search_vertex are not connected).
        Postcondition: a vertex is reachable from s if and only if it is marked as “explored.”"""
 
+    # Setup for DFS
     explored = {}
     for v in graph.get_vertices():
         explored[v] = False
 
+    # The stack stores the vertices that still need to be searched.
     stack = [search_vertex]
 
     while len(stack) > 0:
@@ -18,6 +20,7 @@ def depth_first_search_iterative(graph, search_vertex):
         if not explored[v]:
             explored[v] = True
 
+            # Add all vertices that are neighbours of v to the stack.
             for ie in v.get_incident_edges():
                 v1 = ie.get_vertex1()
                 v2 = ie.get_vertex2()

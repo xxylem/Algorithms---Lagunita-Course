@@ -14,6 +14,13 @@ def _edge_exists_from(v1, v2):
 
 class DirectedGraph(Graph):
 
+    def add_vertex(self, name=None):
+        """ Add a new vertex to this directed graph."""
+        # TODO prevent adding a vertex with a name already taken.
+        v = DirectedGraph.Vertex(name=name)
+        self.vertices.add(v)
+        return v
+
     def add_edge(self, v1, v2, name=None):
         """ Add a directed edge from v1 to v2."""
 
@@ -53,6 +60,14 @@ class DirectedGraph(Graph):
             rev_g.add_edge(new_from_vertex, new_to_vertex, name=e.get_name() + " reversed")
 
         return rev_g
+
+    class DirectedVertex(Graph.Vertex):
+        def get_neighbours(self):
+            """ Get all the neighbours of this vertex"""
+            neighbours = []
+            for ie in self.edges:
+                neighbours.append(ie.get_to())
+            return neighbours
 
     class DirectedEdge(Graph.Edge):
 

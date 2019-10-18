@@ -9,7 +9,12 @@ def _edge_exists_between(v1, v2):
 
 
 class Graph:
-    """ A simple representation of a graph G = (V, E) with the set of vertices V and set of edges E. """
+    """ A simple representation of a graph G = (V, E) with the set of vertices V and set of edges E.
+        Standard usage:
+            - create a graph: g = Graph()
+            - add vertices: v1 = g.add_vertex(),...
+            - add_edges: e = g.add_edge(v1, v2),...
+        You can add names to the elements of the graph using the optional name parameter. """
 
     def __init__(self, name=None):
         if name is None:
@@ -76,6 +81,19 @@ class Graph:
         # Getters
         def get_name(self): return self.name
         def get_incident_edges(self): return self.edges
+
+        def get_neighbours(self):
+            """ Get all the neighbours of this vertex"""
+            neighbours = []
+            for ie in self.edges:
+                v1 = ie.get_vertex1()
+                v2 = ie.get_vertex2()
+                if self is v1:
+                    new_v = v2
+                else:
+                    new_v = v1
+                neighbours.append(new_v)
+            return neighbours
 
         # Overidden core object methods.
         def __eq__(self, other):
