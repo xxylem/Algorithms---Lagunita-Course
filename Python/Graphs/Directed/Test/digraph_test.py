@@ -52,8 +52,8 @@ class DirectedGraphTest(unittest.TestCase):
         self.assertNotEqual(v1, v2)
         self.assertEqual(e1.get_from(), v1)
         self.assertEqual(e1.get_to(), v2)
-        self.assertEqual(e1.get_from(), v2)
-        self.assertEqual(e1.get_to(), v1)
+        self.assertEqual(e2.get_from(), v2)
+        self.assertEqual(e2.get_to(), v1)
         self.assertEqual(v1.get_incident_edges(), {e1})
         self.assertEqual(v2.get_incident_edges(), {e2})
 
@@ -122,7 +122,7 @@ class DirectedGraphTest(unittest.TestCase):
         self.assertEqual(b.get_incident_edges(), set())
         self.assertEqual(c.get_incident_edges(), {e_c_h})
         self.assertEqual(d.get_incident_edges(), {e_d_a, e_d_h, e_d_e})
-        self.assertEqual(e.get_incident_edges(), {e_d_e})
+        self.assertEqual(e.get_incident_edges(), {e_e_d})
         self.assertEqual(f.get_incident_edges(), set())
         self.assertEqual(g.get_incident_edges(), set())
         self.assertEqual(h.get_incident_edges(), {e_h_b})
@@ -140,9 +140,9 @@ class DirectedGraphTest(unittest.TestCase):
         self.assertEqual(e_d_e.get_from(), d)
         self.assertEqual(e_d_e.get_to(), e)
         self.assertEqual(e_e_d.get_from(), e)
-        self.assertEqual(e_e_d.get_tio(), d)
+        self.assertEqual(e_e_d.get_to(), d)
         self.assertEqual(e_h_b.get_from(), h)
-        self.assertEqual(e_h_b.get_to, b)
+        self.assertEqual(e_h_b.get_to(), b)
         self.assertEqual(e_c_h.get_from(), c)
         self.assertEqual(e_c_h.get_to(), h)
         self.assertEqual(e_i_j.get_from(), i)
@@ -164,19 +164,15 @@ class DirectedGraphTest(unittest.TestCase):
         with self.assertRaises(ValueError):
             bad_e1 = g.add_edge(v1, v2)
 
-        self.assertTrue(bad_e1 is None)
-
         e2 = g.add_edge(v2, v1)
         self.assertEqual(g.get_edges(), {e1, e2})
         self.assertEqual(v1.get_incident_edges(), {e1})
         self.assertEqual(v2.get_incident_edges(), {e2})
         self.assertEqual(e2.get_from(), v2)
-        self.assertEqual(e1.get_to(), v1)
+        self.assertEqual(e2.get_to(), v1)
 
         with self.assertRaises(ValueError):
             bad_e2 = g.add_edge(v2, v1)
-
-        self.assertTrue(bad_e2 is None)
 
         self.assertEqual(g.get_edges(), {e1, e2})
 
