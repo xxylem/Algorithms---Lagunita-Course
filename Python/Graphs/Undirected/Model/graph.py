@@ -33,7 +33,7 @@ class Graph:
     def get_edge(self, from_v, to_v):
         for e in self.edges:
             if e.get_vertex1() == from_v:
-                if e.get_vertex2 == to_v:
+                if e.get_vertex2() == to_v:
                     return e
         return None
 

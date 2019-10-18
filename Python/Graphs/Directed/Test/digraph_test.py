@@ -18,6 +18,22 @@ class DirectedGraphTest(unittest.TestCase):
         self.assertEqual(g.get_edges(), set())
         self.assertEqual(g.get_vertices(), {v})
 
+    def test_get_vertex_by_name(self):
+        g = DirectedGraph()
+        v = g.add_vertex(name="BOB")
+        found_v = g.get_vertex("BOB")
+        self.assertIsNotNone(found_v)
+        self.assertEqual(v, found_v)
+
+    def test_get_edge_by_vertices(self):
+        g = DirectedGraph()
+        v1 = g.add_vertex()
+        v2 = g.add_vertex()
+        e = g.add_edge(v1, v2, name="LOVELY WALK")
+        found_e = g.get_edge(v1, v2)
+        self.assertIsNotNone(found_e)
+        self.assertEqual(e, found_e)
+
     def test_create_graph_only_vertices(self):
         g = DirectedGraph()
         vs = []
@@ -194,7 +210,7 @@ class DirectedGraphTest(unittest.TestCase):
         e_a_b = orig_g.add_edge(a, b, name="AB")
         g_rev = orig_g.reverse()
 
-        self.assertEqual(len(g_rev.get_incident_edges()), 1)
+        self.assertEqual(len(g_rev.get_edges()), 1)
         self.assertEqual(len(g_rev.get_vertices()), 2)
 
         a_rev = g_rev.get_vertex("A")

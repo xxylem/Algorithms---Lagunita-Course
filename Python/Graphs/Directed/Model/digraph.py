@@ -22,13 +22,30 @@ class DirectedGraph(Graph):
         if _edge_exists_from(v1, v2):
             raise ValueError("There is already a directed edge between those two vertices.")
 
-        e = DirectedGraph.DirectedEdge(v1, v2, name)
+        e = DirectedGraph.DirectedEdge(v1, v2, name=name)
         v1.get_incident_edges().add(e)
         self.edges.add(e)
         return e
 
     def reverse(self):
-        pass
+        """ Returns a copy of the digraph with a copy of all vertices and an edge in the opposite direction
+            to the original."""
+
+        rev_g = DirectedGraph(name=self.name + " reversed")
+        names_to_vertices = {}
+
+        for v in self.vertices:
+            new_v = rev_g.add_vertex(name=v.get_name())
+            names_to_vertices[new_v.get_name()] = new_v
+
+        for e in self.edges:
+            old_from_name = e.get_from().get_name()
+            new_to_vertex = names_to_vertices[old_from_name]
+            old_to_name = e.get_to().get_name()
+            new_from_vertex = names_to_vertices[old_to_name]
+            rev_g.add_edge(new_from_vertex, new_to_vertex, name=e.get_name() + " reversed")
+
+        return rev_g
 
     class DirectedEdge(Graph.Edge):
 
