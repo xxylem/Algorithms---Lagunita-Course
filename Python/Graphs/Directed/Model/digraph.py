@@ -14,7 +14,7 @@ def _edge_exists_from(v1, v2):
 
 class DirectedGraph(Graph):
 
-    def add_edge(self, v1, v2):
+    def add_edge(self, v1, v2, name=None):
         if v1 not in self.vertices or v2 not in self.vertices:
             raise ValueError("The vertices must already be in the graph.")
         if v1 == v2:
@@ -22,7 +22,7 @@ class DirectedGraph(Graph):
         if _edge_exists_from(v1, v2):
             raise ValueError("There is already a directed edge between those two vertices.")
 
-        e = DirectedGraph.DirectedEdge(v1, v2)
+        e = DirectedGraph.DirectedEdge(v1, v2, name)
         v1.get_incident_edges().add(e)
         self.edges.add(e)
         return e

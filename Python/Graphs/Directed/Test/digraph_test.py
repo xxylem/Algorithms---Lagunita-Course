@@ -1,6 +1,6 @@
 import unittest
 
-from Graphs.Directed.Model.digraph import DirectedGraph
+from Graphs.Directed.Model.digraph import DirectedGraph, _edge_exists_from
 
 
 class DirectedGraphTest(unittest.TestCase):
@@ -188,7 +188,31 @@ class DirectedGraphTest(unittest.TestCase):
         self.assertEqual(b.get_incident_edges(), set())
 
     def test_reverse_edge_in_two_vertex_graph(self):
-        pass
+        orig_g = DirectedGraph()
+        a = orig_g.add_vertex(name="A")
+        b = orig_g.add_vertex(name="B")
+        e_a_b = orig_g.add_edge(a, b, name="AB")
+        g_rev = orig_g.reverse()
+
+        self.assertEqual(len(g_rev.get_incident_edges()), 1)
+        self.assertEqual(len(g_rev.get_vertices()), 2)
+
+        a_rev = g_rev.get_vertex("A")
+        self.assertIsNotNone(a_rev)
+        b_rev = g_rev.get_vertex("B")
+        self.assertIsNotNone(b_rev)
+
+        self.assertEqual(a_rev, a)
+        self.assertEqual(b_rev, b)
+
+        self.assertTrue(_edge_exists_from(b_rev, a_rev))
+        self.assertFalse(_edge_exists_from(a_rev, b_rev))
+
+        e_b_a = g_rev.get_edge(b_rev, a_rev)
+        self.assertIsNotNone(e_b_a)
+        self.assertIsNone(g_rev.get_edge(a_rev, b_rev))
+        self.assertNotEqual(e_a_b, e_b_a)
+
 
 if __name__ == '__main__':
     unittest.main()

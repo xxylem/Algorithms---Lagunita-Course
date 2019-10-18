@@ -24,16 +24,30 @@ class Graph:
         self.name = name
 
     # Getters
+    def get_vertex(self, name):
+        for v in self.vertices:
+            if v.name == name:
+                return v
+        return None
+
+    def get_edge(self, from_v, to_v):
+        for e in self.edges:
+            if e.get_vertex1() == from_v:
+                if e.get_vertex2 == to_v:
+                    return e
+        return None
+
+    def get_name(self): return self.name
     def get_edges(self): return self.edges
     def get_vertices(self): return self.vertices
 
-    def add_vertex(self):
+    def add_vertex(self, name=None):
         """ Add a new vertex to this graph."""
-        v = Graph.Vertex()
+        v = Graph.Vertex(name=name)
         self.vertices.add(v)
         return v
 
-    def add_edge(self, v1, v2):
+    def add_edge(self, v1, v2, name=None):
         if v1 not in self.vertices or v2 not in self.vertices:
             raise ValueError("The vertices must already be in the graph.")
         if v1 == v2:
@@ -41,7 +55,7 @@ class Graph:
         if _edge_exists_between(v1, v2):
             raise ValueError("There is already an edge between those two vertices.")
 
-        e = Graph.Edge(v1, v2)
+        e = Graph.Edge(v1, v2, name)
         v1.get_incident_edges().add(e)
         v2.get_incident_edges().add(e)
         self.edges.add(e)
@@ -60,6 +74,7 @@ class Graph:
             self.name = name
 
         # Getter
+        def get_name(self): return self.name
         def get_incident_edges(self): return self.edges
 
         def __eq__(self, other):
@@ -67,8 +82,9 @@ class Graph:
                 return self.name == other.name
             return False
 
-        def __hash__(self):
-            return hash(self.name)
+        def __hash__(self): return hash(self.name)
+
+        def __repr__(self): return self.name
 
     class Edge:
         """ An edge, e, consists of the two vertices, vertex1 and vertex2, that are incident to the edge."""
@@ -81,11 +97,9 @@ class Graph:
             self.vertex2 = vertex2
             self.name = name
 
-        def get_vertex1(self):
-            return self.vertex1
-
-        def get_vertex2(self):
-            return self.vertex2
+        def get_name(self): return self.name
+        def get_vertex1(self): return self.vertex1
+        def get_vertex2(self): return self.vertex2
 
         def __eq__(self, other):
             if isinstance(other, Graph.Edge):
@@ -94,3 +108,6 @@ class Graph:
 
         def __hash__(self):
             return hash((self.name, self.vertex1, self.vertex2))
+
+        def __repr__(self):
+            return str(self.vertex1) + " ===== " + self.name + " ====> " + str(self.vertex2)

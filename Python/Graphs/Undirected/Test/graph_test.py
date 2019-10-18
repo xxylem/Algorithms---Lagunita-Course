@@ -10,6 +10,10 @@ class GraphTest(unittest.TestCase):
         self.assertEqual(g.get_edges(), set())
         self.assertEqual(g.get_vertices(), set())
 
+    def test_graph_with_name(self):
+        g = Graph(name="graphylicious")
+        self.assertEqual(g.get_name(), "graphylicious")
+
     def test_create_graph_with_one_vertex(self):
         g = Graph()
         self.assertEqual(g.get_edges(), set())
@@ -17,6 +21,15 @@ class GraphTest(unittest.TestCase):
         v = g.add_vertex()
         self.assertEqual(g.get_edges(), set())
         self.assertEqual(g.get_vertices(), {v})
+
+    def test_vertex_edge_names(self):
+        g = Graph(name="awesome graph")
+        v1 = g.add_vertex(name="cool vertex")
+        v2 = g.add_vertex(name="rad vertex")
+        e = g.add_edge(v1, v2, "hip edge")
+        self.assertEqual(v1.get_name(), "cool vertex")
+        self.assertEqual(v2.get_name(), "rad vertex")
+        self.assertEqual(e.get_name(), "hip edge")
 
     def test_create_graph_only_vertices(self):
         g = Graph()
