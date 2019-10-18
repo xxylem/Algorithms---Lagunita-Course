@@ -38,3 +38,11 @@ def topological_sort(dag):
     return ordering
 
 
+def topological_sort_to_list(dag):
+    """ Input: directed acyclic graph G = (V, E) in adjacency-list representation.
+        Output: a list of the vertices V in a topological sort. Vertices with smaller f-values appear earlier
+                    in the list.
+            Postcondition: the f-values of vertices constitute a topological ordering of G."""
+    ordering = topological_sort(dag)
+    return sorted(ordering, key=ordering.get)
+

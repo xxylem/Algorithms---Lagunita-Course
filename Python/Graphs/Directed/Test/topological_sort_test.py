@@ -1,7 +1,7 @@
 import unittest
 
 from Graphs.Directed.Model.digraph import DirectedGraph
-from Graphs.Directed.topological_sort import topological_sort
+from Graphs.Directed.topological_sort import topological_sort, topological_sort_to_list
 
 
 class TopologicalSortTest(unittest.TestCase):
@@ -76,6 +76,49 @@ class TopologicalSortTest(unittest.TestCase):
         self.assertLess(ordering[h], ordering[b])
 
         self.assertLess(ordering[i], ordering[j])
+
+    def test_topo_sort_to_list(self):
+        dag = DirectedGraph()
+
+        a = dag.add_vertex()
+        b = dag.add_vertex()
+        c = dag.add_vertex()
+        d = dag.add_vertex()
+        e = dag.add_vertex()
+        f = dag.add_vertex()
+        g = dag.add_vertex()
+        h = dag.add_vertex()
+        i = dag.add_vertex()
+        j = dag.add_vertex()
+
+        dag.add_edge(a, g)
+        dag.add_edge(a, d)
+        dag.add_edge(d, h)
+        dag.add_edge(d, e)
+        dag.add_edge(h, b)
+        dag.add_edge(c, h)
+        dag.add_edge(i, j)
+
+        ordering_list = topological_sort_to_list(dag)
+
+        self.assertEqual(len(ordering_list), 10)
+
+        self.assertLess(ordering_list.index(a), ordering_list.index(g))
+        self.assertLess(ordering_list.index(a), ordering_list.index(d))
+        self.assertLess(ordering_list.index(a), ordering_list.index(e))
+        self.assertLess(ordering_list.index(a), ordering_list.index(h))
+        self.assertLess(ordering_list.index(a), ordering_list.index(b))
+
+        self.assertLess(ordering_list.index(d), ordering_list.index(e))
+        self.assertLess(ordering_list.index(d), ordering_list.index(h))
+        self.assertLess(ordering_list.index(d), ordering_list.index(b))
+
+        self.assertLess(ordering_list.index(c), ordering_list.index(h))
+        self.assertLess(ordering_list.index(c), ordering_list.index(b))
+
+        self.assertLess(ordering_list.index(h), ordering_list.index(b))
+
+        self.assertLess(ordering_list.index(i), ordering_list.index(j))
 
 
 if __name__ == '__main__':

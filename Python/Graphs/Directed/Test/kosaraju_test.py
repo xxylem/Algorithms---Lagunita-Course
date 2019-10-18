@@ -27,10 +27,10 @@ class KosarajuTest(unittest.TestCase):
         self.assertNotEqual(connected_components[v1], connected_components[v2])
 
     def test_two_nodes_connected_one_way(self):
-        g = DirectedGraph()
-        v1 = g.add_vertex()
-        v2 = g.add_vertex()
-        g.add_edge(v1, v2)
+        g = DirectedGraph(name="G")
+        v1 = g.add_vertex(name="A")
+        v2 = g.add_vertex(name="B")
+        g.add_edge(v1, v2, name="A=>B")
 
         connected_components = kosaraju(g)
 
@@ -50,16 +50,16 @@ class KosarajuTest(unittest.TestCase):
     def test_on_larger_graph(self):
         grf = DirectedGraph()
 
-        a = grf.add_vertex()
-        b = grf.add_vertex()
-        c = grf.add_vertex()
-        d = grf.add_vertex()
-        e = grf.add_vertex()
-        f = grf.add_vertex()
-        g = grf.add_vertex()
-        h = grf.add_vertex()
-        i = grf.add_vertex()
-        j = grf.add_vertex()
+        a = grf.add_vertex(name="A")
+        b = grf.add_vertex(name="B")
+        c = grf.add_vertex(name="C")
+        d = grf.add_vertex(name="D")
+        e = grf.add_vertex(name="E")
+        f = grf.add_vertex(name="F")
+        g = grf.add_vertex(name="G")
+        h = grf.add_vertex(name="H")
+        i = grf.add_vertex(name="I")
+        j = grf.add_vertex(name="J")
 
         grf.add_edge(a, g)
         grf.add_edge(a, d)
@@ -86,7 +86,7 @@ class KosarajuTest(unittest.TestCase):
 
         for comp in all_comps:
             for c in comp:
-                for other in (comp - c):
+                for other in (comp - {c}):
                     self.assertEqual(connected_components[c], connected_components[other])
                 for other in (all_vs - comp):
                     self.assertNotEqual(connected_components[c], connected_components[other])

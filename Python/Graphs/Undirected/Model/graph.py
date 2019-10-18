@@ -11,26 +11,24 @@ def _edge_exists_between(v1, v2):
 class Graph:
     """ A simple representation of a graph G = (V, E) with the set of vertices V and set of edges E. """
 
-    def __init__(self, edges=None, vertices=None, name=None):
-        if vertices is None:
-            vertices = []
-        if edges is None:
-            edges = []
+    def __init__(self, name=None):
         if name is None:
             name = str(id(self))
 
-        self.edges = set(edges)
-        self.vertices = set(vertices)
+        self.edges = set()
+        self.vertices = set()
         self.name = name
 
     # Getters
     def get_vertex(self, name):
+        """ Get a vertex by its name. """
         for v in self.vertices:
             if v.name == name:
                 return v
         return None
 
     def get_edge(self, from_v, to_v):
+        """ Get a vertex based on the vertices incident to it. """
         for e in self.edges:
             if e.get_vertex1() == from_v:
                 if e.get_vertex2() == to_v:
@@ -40,14 +38,18 @@ class Graph:
     def get_name(self): return self.name
     def get_edges(self): return self.edges
     def get_vertices(self): return self.vertices
+    # End getters
 
     def add_vertex(self, name=None):
         """ Add a new vertex to this graph."""
+        # TODO prevent adding a vertex with a name already taken.
         v = Graph.Vertex(name=name)
         self.vertices.add(v)
         return v
 
     def add_edge(self, v1, v2, name=None):
+        """ Add an undirected edge between v1 and v2. """
+        # TODO prevent adding an edge with a name already taken.
         if v1 not in self.vertices or v2 not in self.vertices:
             raise ValueError("The vertices must already be in the graph.")
         if v1 == v2:
@@ -64,19 +66,18 @@ class Graph:
     class Vertex:
         """ A vertex, v, has a set of incident edges. """
 
-        def __init__(self, edges=None, name=None):
-            if edges is None:
-                edges = []
+        def __init__(self, name=None):
             if name is None:
                 name = str(id(self))
 
-            self.edges = set(edges)
+            self.edges = set()
             self.name = name
 
-        # Getter
+        # Getters
         def get_name(self): return self.name
         def get_incident_edges(self): return self.edges
 
+        # Overidden core object methods.
         def __eq__(self, other):
             if isinstance(other, Graph.Vertex):
                 return self.name == other.name
@@ -97,6 +98,7 @@ class Graph:
             self.vertex2 = vertex2
             self.name = name
 
+        # Getters
         def get_name(self): return self.name
         def get_vertex1(self): return self.vertex1
         def get_vertex2(self): return self.vertex2

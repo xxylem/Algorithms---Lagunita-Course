@@ -15,6 +15,8 @@ def _edge_exists_from(v1, v2):
 class DirectedGraph(Graph):
 
     def add_edge(self, v1, v2, name=None):
+        """ Add a directed edge from v1 to v2."""
+
         if v1 not in self.vertices or v2 not in self.vertices:
             raise ValueError("The vertices must already be in the graph.")
         if v1 == v2:
@@ -29,15 +31,20 @@ class DirectedGraph(Graph):
 
     def reverse(self):
         """ Returns a copy of the digraph with a copy of all vertices and an edge in the opposite direction
-            to the original."""
+            to the original.
+            NOTE: Creates new vertices to avoid destructive effects to the original graph.
+                  Use the get_vertex() and get_edge() methods to search for the equivalent
+                  vertex/edge by name. """
 
         rev_g = DirectedGraph(name=self.name + " reversed")
         names_to_vertices = {}
 
+        # Copy over vertices using the same names as in the original graph.
         for v in self.vertices:
             new_v = rev_g.add_vertex(name=v.get_name())
             names_to_vertices[new_v.get_name()] = new_v
 
+        # Establish edges in the reverse direction between vertices using their names.
         for e in self.edges:
             old_from_name = e.get_from().get_name()
             new_to_vertex = names_to_vertices[old_from_name]
