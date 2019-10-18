@@ -23,15 +23,12 @@ class Graph:
         self.vertices = set(vertices)
         self.name = name
 
-
     # Getters
     def get_edges(self): return self.edges
     def get_vertices(self): return self.vertices
 
     def add_vertex(self):
-        """ Add an edge or vertex to this graph."""
-        # TODO Do I want to add a label to the vertex? It may be easier to keep track of them in larger graphs.
-        #      I could add nice printing with the label.
+        """ Add a new vertex to this graph."""
         v = Graph.Vertex()
         self.vertices.add(v)
         return v
@@ -65,6 +62,14 @@ class Graph:
         # Getter
         def get_incident_edges(self): return self.edges
 
+        def __eq__(self, other):
+            if isinstance(other, Graph.Vertex):
+                return self.name == other.name
+            return False
+
+        def __hash__(self):
+            return hash(self.name)
+
     class Edge:
         """ An edge, e, consists of the two vertices, vertex1 and vertex2, that are incident to the edge."""
 
@@ -82,3 +87,10 @@ class Graph:
         def get_vertex2(self):
             return self.vertex2
 
+        def __eq__(self, other):
+            if isinstance(other, Graph.Edge):
+                return self.name == other.name and self.vertex1 == other.vertex1 and self.vertex2 == other.vertex2
+            return False
+
+        def __hash__(self):
+            return hash((self.name, self.vertex1, self.vertex2))
