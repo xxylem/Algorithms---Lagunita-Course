@@ -20,14 +20,7 @@ def depth_first_search_iterative(graph, search_vertex):
         if not explored[v]:
             explored[v] = True
 
-            # Add all vertices that are neighbours of v to the stack.
-            for ie in v.get_incident_edges():
-                v1 = ie.get_vertex1()
-                v2 = ie.get_vertex2()
-                if v is v1:
-                    new_v = v2
-                else:
-                    new_v = v1
-                stack.append(new_v)
+            for neighbour in v.get_neighbours():
+                stack.append(neighbour)
 
     return explored

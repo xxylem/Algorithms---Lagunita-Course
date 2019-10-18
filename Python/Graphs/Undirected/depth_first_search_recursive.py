@@ -12,15 +12,9 @@ def depth_first_search_recursive(graph, search_vertex):
 
     def helper(s):
         explored[s] = True
-        for ie in s.get_incident_edges():
-            v1 = ie.get_vertex1()
-            v2 = ie.get_vertex2()
-            if s is v1:
-                new_v = v2
-            else:
-                new_v = v1
-            if not explored[new_v]:
-                helper(new_v)
+        for neighbour in s.get_neighbours():
+            if not explored[neighbour]:
+                helper(neighbour)
 
     helper(search_vertex)
     return explored

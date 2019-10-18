@@ -18,12 +18,9 @@ def topological_sort(dag):
 
         explored[search_vertex] = True
 
-        for ie in search_vertex.get_incident_edges():
-
-            # Go deep first
-            new_v = ie.get_to()
-            if not explored[new_v]:
-                helper(new_v)
+        for neighbour in search_vertex.get_neighbours():
+            if not explored[neighbour]:
+                helper(neighbour)
 
         # Give this vertex an ordering
         nonlocal current_label

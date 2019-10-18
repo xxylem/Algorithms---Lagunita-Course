@@ -24,18 +24,10 @@ def breadth_first_search(graph, search_vertex):
 
         # Remove v from front of queue and check all its incident edges for unexplored vertices.
         v = queue.get()
-        incident_edges = v.get_incident_edges()
-        for ie in incident_edges:
-            # One of the vertices is the current vertex. We only want the new vertex.
-            v1 = ie.get_vertex1()
-            v2 = ie.get_vertex2()
-            if v1 == v:
-                new_v = v2
-            else:
-                new_v = v1
 
-            if not explored[new_v]:
-                explored[new_v] = True
-                queue.put(new_v)
+        for neighbour in v.get_neighbours():
+            if not explored[neighbour]:
+                explored[neighbour] = True
+                queue.put(neighbour)
 
     return explored
