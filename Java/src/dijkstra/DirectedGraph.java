@@ -96,7 +96,7 @@ public class DirectedGraph {
 
     private PriorityQueue<VertexQueueEntry> getHeapStartingFrom(Vertex start)
     {
-        PriorityQueue<VertexQueueEntry> heap = new PriorityQueue<>(Comparator.comparing(VertexQueueEntry::getKey));
+        PriorityQueue<VertexQueueEntry> heap = new PriorityQueue<>(verticesToEdges.size(), Comparator.comparing(VertexQueueEntry::getKey));
         for (Vertex v : verticesToEdges.keySet())
         {
             VertexQueueEntry entry = new VertexQueueEntry(Integer.MAX_VALUE, v);
